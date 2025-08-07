@@ -26,7 +26,7 @@ export function CallToAction() {
                 variant="bizzie"
                 size="lg"
               />
-              <Button asChild variant="secondary" className="btn-secondary">
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
                 <Link href="/pricing">
                   View Demo
                 </Link>

@@ -68,13 +68,16 @@
     @apply bg-bizzie-100 hover:bg-bizzie-200 text-bizzie-800 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-bizzie-300 hover:border-bizzie-400;
   }
 
+  /* Enhanced dark mode button styling */
   .dark .btn-primary {
-    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white;
+    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white rounded-lg shadow-soft hover:shadow-soft-lg !important;
   }
 
   .dark .btn-secondary {
-    @apply bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white hover:border-white;
+    @apply bg-bizzie-700 hover:bg-bizzie-600 text-white border border-bizzie-600 rounded-lg !important;
   }
+
+
 
   .card-enhanced {
     @apply bg-white/90 backdrop-blur-sm border border-bizzie-200 rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 p-6;
@@ -161,27 +164,48 @@
   .dark [data-variant="link"],
   .dark button[class*="variant-link"],
   .dark .btn-link {
-    @apply text-white !important;
+    @apply text-white bg-transparent border-none !important;
   }
 
   .dark .text-scheme-text {
     @apply text-white !important;
   }
 
+  /* Enhanced button styling for all modes */
+  button,
+  .btn,
+  [role="button"] {
+    @apply rounded-lg transition-all duration-200 font-medium;
+  }
+
   /* Fix secondary buttons and other button variants in dark mode */
   .dark button:not(.btn-primary):not([class*="bg-white"]):not([class*="bg-bizzie"]) {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 !important;
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
   }
 
   /* Fix specific button variants in dark mode */
   .dark .btn-secondary,
   .dark button[class*="variant-secondary"] {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 !important;
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
   }
 
   /* Improve CTA and primary button dark mode styling */
   .dark .btn-primary {
-    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white !important;
+    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white rounded-lg !important;
+  }
+
+  /* Fix text links - remove background colors */
+  .dark a:not(.btn):not([class*="bg-"]),
+  .dark .text-link,
+  .dark [data-variant="link"]:not(.btn) {
+    @apply text-white bg-transparent hover:text-bizzie-300 !important;
+  }
+
+  /* Light mode text links */
+  a:not(.btn):not([class*="bg-"]),
+  .text-link,
+  [data-variant="link"]:not(.btn) {
+    @apply text-bizzie-900 bg-transparent hover:text-bizzie-700;
   }
 
   /* Fix timeline and roadmap buttons specifically */
@@ -207,6 +231,10 @@
   }
 
   /* Enhanced pricing table dark mode styling */
+  .dark .pricing-table {
+    @apply bg-bizzie-900;
+  }
+
   .dark .pricing-table .grid {
     @apply bg-bizzie-800 border-bizzie-700;
   }
@@ -219,6 +247,11 @@
     @apply text-white;
   }
 
+  /* Fix pricing table header backgrounds */
+  .dark .pricing-table > div:first-child {
+    @apply bg-bizzie-800 border-bizzie-700;
+  }
+
   /* Improve feature category headers in dark mode */
   .dark .feature-category-header {
     @apply bg-bizzie-700 text-white;
@@ -226,7 +259,7 @@
 
   /* Fix pricing table cell content in dark mode */
   .dark .pricing-table .grid div {
-    @apply text-white border-bizzie-700;
+    @apply text-white border-bizzie-700 bg-bizzie-800;
   }
 
   .dark .pricing-table .grid p {
@@ -240,6 +273,34 @@
 
   .dark .pricing-table .border-l {
     @apply border-bizzie-700;
+  }
+
+  /* Ensure all pricing table rows have proper backgrounds */
+  .dark .pricing-table .grid:not(:first-child) {
+    @apply bg-bizzie-800;
+  }
+
+  /* Fix any white backgrounds in dark mode by targeting specific components */
+  .dark .pricing-table [class*="bg-white"] {
+    background-color: #354F52 !important;
+  }
+
+  .dark [class*="bg-white"]:not(.btn):not(button) {
+    background-color: #354F52 !important;
+  }
+
+  /* Enhanced button styling improvements */
+  .btn-primary {
+    @apply rounded-lg px-6 py-3 font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg px-6 py-3 font-medium transition-all duration-200 border;
+  }
+
+  /* Fix Get started buttons in pricing table */
+  .dark .pricing-table button {
+    @apply text-bizzie-900 bg-white hover:bg-gray-100 border border-white rounded-lg !important;
   }
 
   /* Alternating section backgrounds for visual variety */

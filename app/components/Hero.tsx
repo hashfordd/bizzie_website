@@ -29,7 +29,7 @@ export function Hero() {
                 variant="bizzie"
                 size="lg"
               />
-              <Button asChild variant="secondary" className="btn-secondary">
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
                 <Link href="/features">
                   Learn More
                 </Link>

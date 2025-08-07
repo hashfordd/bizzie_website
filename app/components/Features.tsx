@@ -3,6 +3,7 @@
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { ChevronRight, RelumeIcon } from "relume-icons";
+import Link from "next/link";
 
 export function Features() {
   return (
@@ -37,13 +38,10 @@ export function Features() {
               expenses.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
-                variant="link"
-                size="link"
-              >
+              <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700 dark:text-white dark:hover:text-bizzie-300 underline transition-colors">
                 Learn More
-              </Button>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
             </div>
           </div>
           <div>
@@ -59,13 +57,10 @@ export function Features() {
               glance.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
-                variant="link"
-                size="link"
-              >
+              <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700 dark:text-white dark:hover:text-bizzie-300 underline transition-colors">
                 Learn More
-              </Button>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
             </div>
           </div>
           <div>
@@ -80,13 +75,10 @@ export function Features() {
               profits.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
-                variant="link"
-                size="link"
-              >
+              <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700 dark:text-white dark:hover:text-bizzie-300 underline transition-colors">
                 Learn More
-              </Button>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
             </div>
           </div>
         </div>

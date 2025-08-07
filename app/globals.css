@@ -181,7 +181,10 @@
   .dark button[class*="variant-link"],
   .dark [class*="variant-link"],
   .dark [data-variant="link"],
-  .dark [class*="size-link"] {
+  .dark [class*="size-link"],
+  .dark button.variant-link,
+  .dark button[size="link"],
+  .dark button:contains("Learn More") {
     background: none !important;
     background-color: transparent !important;
     border: none !important;
@@ -191,6 +194,56 @@
     color: white !important;
     text-decoration: underline;
     font-weight: normal !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    line-height: normal !important;
+  }
+
+  /* More specific targeting for Relume UI Button components with link variant */
+  .dark .btn[data-variant="link"],
+  .dark button[data-relume-element][data-variant="link"],
+  .dark [class*="Button"][data-variant="link"],
+  .dark [class*="relume"] button[data-variant="link"] {
+    all: unset !important;
+    color: white !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Ultra-specific override for all buttons in dark mode that contain Learn More */
+  .dark button:is([variant="link"], [size="link"], [data-variant="link"], [data-size="link"]) {
+    all: unset !important;
+    color: white !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+  }
+
+  /* Emergency override - target any button with Learn More text specifically */
+  .dark div button {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .dark div button[variant="link"],
+  .dark div button[size="link"] {
+    all: unset !important;
+    color: white !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
   }
 
   .dark a[class*="variant-link"]:hover,

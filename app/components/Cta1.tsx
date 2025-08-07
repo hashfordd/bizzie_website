@@ -7,14 +7,14 @@ import Link from "next/link";
 
 export function Cta1() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-accent">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-slate-50">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
           <div className="animate-slide-up">
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6 text-slate-900 leading-tight">
               Unlock Your Business <span className="text-primary">Potential</span>
             </h2>
-            <p className="text-medium text-muted-foreground">
+            <p className="text-lg text-slate-600 leading-relaxed">
               Experience the power of Bizzie—your partner in achieving financial
               clarity and business growth.
             </p>

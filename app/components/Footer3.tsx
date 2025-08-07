@@ -11,7 +11,7 @@ import {
 
 export function Footer3() {
   return (
-    <footer className="px-[5%] py-12 md:py-18 lg:py-20 section-bg-dark text-bizzie-100">
+    <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-slate-900 text-white">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[4vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-20">
           <div>
@@ -25,39 +25,39 @@ export function Footer3() {
               </a>
             </div>
             <div className="mb-6 md:mb-8">
-              <p className="text-small mb-1 font-semibold text-bizzie-300">Address:</p>
-              <p className="text-small mb-5 md:mb-6 text-bizzie-200">
+              <p className="text-small mb-1 font-semibold text-slate-300">Address:</p>
+              <p className="text-small mb-5 md:mb-6 text-slate-400">
                 Level 1, 12 Sample St, Sydney NSW 2000
               </p>
-              <p className="text-small mb-1 font-semibold text-bizzie-300">Contact:</p>
+              <p className="text-small mb-1 font-semibold text-slate-300">Contact:</p>
               <a
                 href="tel:1800 123 4567"
-                className="text-small block underline text-bizzie-200 hover:text-bizzie-100 transition-colors"
+                className="text-small block underline text-slate-400 hover:text-white transition-colors"
               >
                 1800 123 4567
               </a>
               <a
                 href="mailto:info@bizzie.io"
-                className="text-small block underline text-bizzie-200 hover:text-bizzie-100 transition-colors"
+                className="text-small block underline text-slate-400 hover:text-white transition-colors"
               >
                 info@bizzie.io
               </a>
             </div>
             <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3">
               <a href="#" className="hover:scale-110 transition-transform">
-                <FacebookLogo className="size-6 text-bizzie-400 hover:text-bizzie-300" />
+                <FacebookLogo className="size-6 text-slate-400 hover:text-white" />
               </a>
               <a href="#" className="hover:scale-110 transition-transform">
-                <InstagramLogo className="size-6 text-bizzie-400 hover:text-bizzie-300" />
+                <InstagramLogo className="size-6 text-slate-400 hover:text-white" />
               </a>
               <a href="#" className="hover:scale-110 transition-transform">
-                <XLogo className="size-6 p-0.5 text-bizzie-400 hover:text-bizzie-300" />
+                <XLogo className="size-6 p-0.5 text-slate-400 hover:text-white" />
               </a>
               <a href="#" className="hover:scale-110 transition-transform">
-                <LinkedinLogo className="size-6 text-bizzie-400 hover:text-bizzie-300" />
+                <LinkedinLogo className="size-6 text-slate-400 hover:text-white" />
               </a>
               <a href="#" className="hover:scale-110 transition-transform">
-                <YoutubeLogo className="size-6 text-bizzie-400 hover:text-bizzie-300" />
+                <YoutubeLogo className="size-6 text-slate-400 hover:text-white" />
               </a>
             </div>
           </div>

@@ -4,47 +4,47 @@
 
 @layer base {
   :root {
-    --background: 247 249 247;
-    --foreground: 47 62 70;
+    --background: 255 255 255;
+    --foreground: 15 23 42;
     --card: 255 255 255;
-    --card-foreground: 47 62 70;
+    --card-foreground: 15 23 42;
     --popover: 255 255 255;
-    --popover-foreground: 47 62 70;
+    --popover-foreground: 15 23 42;
     --primary: 82 121 111;
-    --primary-foreground: 247 249 247;
-    --secondary: 202 210 197;
-    --secondary-foreground: 47 62 70;
-    --muted: 238 242 238;
-    --muted-foreground: 53 79 82;
+    --primary-foreground: 255 255 255;
+    --secondary: 248 250 252;
+    --secondary-foreground: 30 41 59;
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
     --accent: 132 169 140;
-    --accent-foreground: 47 62 70;
+    --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
-    --border: 221 229 221;
-    --input: 221 229 221;
+    --border: 226 232 240;
+    --input: 226 232 240;
     --ring: 82 121 111;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 26 35 39;
-    --foreground: 202 210 197;
-    --card: 47 62 70;
-    --card-foreground: 202 210 197;
-    --popover: 47 62 70;
-    --popover-foreground: 202 210 197;
+    --background: 2 8 23;
+    --foreground: 248 250 252;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
+    --popover: 15 23 42;
+    --popover-foreground: 248 250 252;
     --primary: 132 169 140;
-    --primary-foreground: 26 35 39;
-    --secondary: 53 79 82;
-    --secondary-foreground: 202 210 197;
-    --muted: 53 79 82;
-    --muted-foreground: 132 169 140;
+    --primary-foreground: 15 23 42;
+    --secondary: 30 41 59;
+    --secondary-foreground: 248 250 252;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
     --accent: 82 121 111;
-    --accent-foreground: 202 210 197;
+    --accent-foreground: 248 250 252;
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
-    --border: 53 79 82;
-    --input: 53 79 82;
+    --border: 30 41 59;
+    --input: 30 41 59;
     --ring: 132 169 140;
   }
 
@@ -90,15 +90,15 @@
   }
 
   .section-bg-subtle {
-    @apply bg-gradient-to-br from-bizzie-50 to-bizzie-100;
+    @apply bg-slate-50/50;
   }
 
   .section-bg-accent {
-    @apply bg-gradient-to-br from-bizzie-100 to-bizzie-200;
+    @apply bg-slate-50;
   }
 
   .section-bg-dark {
-    @apply bg-gradient-to-br from-bizzie-800 to-bizzie-900;
+    @apply bg-slate-900 text-white;
   }
 
   .input-enhanced {

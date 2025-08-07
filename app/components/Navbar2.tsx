@@ -44,7 +44,7 @@ const useRelume = () => {
 export function Navbar2() {
   const useActive = useRelume();
   return (
-    <section className="z-[999] flex w-full items-center border-b border-border bg-background/90 backdrop-blur-md lg:min-h-18 lg:px-[5%] shadow-soft">
+    <section className="z-[999] flex w-full items-center border-b border-slate-200 bg-white/95 backdrop-blur-md lg:min-h-18 lg:px-[5%] shadow-sm">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
@@ -120,19 +120,19 @@ export function Navbar2() {
         >
           <Link
             href="/"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-slate-700 hover:text-primary transition-colors font-medium"
           >
             Home Services
           </Link>
           <Link
             href="/pricing"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-slate-700 hover:text-primary transition-colors font-medium"
           >
             Pricing Plans
           </Link>
           <Link
             href="/features"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-slate-700 hover:text-primary transition-colors font-medium"
           >
             Features List
           </Link>

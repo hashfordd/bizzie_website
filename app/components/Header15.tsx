@@ -7,16 +7,16 @@ import Link from "next/link";
 
 export function Header15() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-subtle">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-x-12 gap-y-5 md:mb-18 md:grid-cols-2 md:gap-y-8 lg:mb-20 lg:gap-x-20 lg:gap-y-16">
           <div className="animate-slide-up">
-            <h1 className="heading-h1 font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
               Transform Your Business with <span className="text-primary">Bizzie</span> Today
             </h1>
           </div>
           <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-medium text-muted-foreground mb-8">
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               Take control of your financial health with Bizzie, the ultimate
               profit coach for home-service businesses. Streamline your
               operations and maximize your profits effortlessly.

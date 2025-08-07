@@ -122,19 +122,19 @@ export function Navbar() {
         >
           <Link
             href="/"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-gray-900 dark:text-gray-300"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-black dark:text-white"
           >
             Home
           </Link>
           <Link
             href="/pricing"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-gray-900 dark:text-gray-300"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-black dark:text-white"
           >
             Pricing
           </Link>
           <Link
             href="/features"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-gray-900 dark:text-gray-300"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-black dark:text-white"
           >
             Features
           </Link>
@@ -143,7 +143,7 @@ export function Navbar() {
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
           >
             <button
-              className="text-regular flex w-full items-center justify-start gap-4 py-3 text-left lg:w-auto lg:flex-none lg:justify-start lg:gap-2 lg:px-4 lg:py-2 text-gray-900 dark:text-gray-300"
+              className="text-regular flex w-full items-center justify-start gap-4 py-3 text-left lg:w-auto lg:flex-none lg:justify-start lg:gap-2 lg:px-4 lg:py-2 text-black dark:text-white"
               onClick={useActive.openOnMobileDropdownMenu}
             >
               <span>More Info</span>
@@ -152,7 +152,7 @@ export function Navbar() {
                 animate={useActive.animateDropdownMenuIcon}
                 transition={{ duration: 0.3 }}
               >
-                <KeyboardArrowDown className="text-gray-900 dark:text-gray-300" />
+                <KeyboardArrowDown className="text-black dark:text-white" />
               </motion.span>
             </button>
             <AnimatePresence>
@@ -182,27 +182,27 @@ export function Navbar() {
                     
                     {/* Company Section */}
                     <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                      <h3 className="font-semibold text-black dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Company
                       </h3>
                       <ul className="space-y-3">
                         <li>
-                          <Link href="/about" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/about" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             About Us
                           </Link>
                         </li>
                         <li>
-                          <Link href="/careers" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/careers" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Careers
                           </Link>
                         </li>
                         <li>
-                          <Link href="/blog" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/blog" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Blog
                           </Link>
                         </li>
                         <li>
-                          <Link href="/testimonials" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/testimonials" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Testimonials
                           </Link>
                         </li>
@@ -211,32 +211,32 @@ export function Navbar() {
 
                     {/* Products & Services */}
                     <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                      <h3 className="font-semibold text-black dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Products & Services
                       </h3>
                       <ul className="space-y-3">
                         <li>
-                          <Link href="/features" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/features" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             All Features
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/services" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Services Overview
                           </Link>
                         </li>
                         <li>
-                          <Link href="/pricing" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/pricing" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Pricing Plans
                           </Link>
                         </li>
                         <li>
-                          <Link href="/roadmap" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/roadmap" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Product Roadmap
                           </Link>
                         </li>
                         <li>
-                          <Link href="/demo" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/demo" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Live Demo
                           </Link>
                         </li>
@@ -245,22 +245,22 @@ export function Navbar() {
 
                     {/* Support & Resources */}
                     <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                      <h3 className="font-semibold text-black dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Support & Resources
                       </h3>
                       <ul className="space-y-3">
                         <li>
-                          <Link href="/support" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/support" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Support Center
                           </Link>
                         </li>
                         <li>
-                          <Link href="/faq" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/faq" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             FAQ
                           </Link>
                         </li>
                         <li>
-                          <Link href="/contact" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/contact" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Contact Us
                           </Link>
                         </li>
@@ -269,22 +269,22 @@ export function Navbar() {
 
                     {/* Legal & Policies */}
                     <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                      <h3 className="font-semibold text-black dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Legal & Policies
                       </h3>
                       <ul className="space-y-3">
                         <li>
-                          <Link href="/privacy" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/privacy" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Privacy Policy
                           </Link>
                         </li>
                         <li>
-                          <Link href="/terms" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/terms" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Terms of Service
                           </Link>
                         </li>
                         <li>
-                          <Link href="/cookies" className="block py-1 text-gray-900 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                          <Link href="/cookies" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
                             Cookie Settings
                           </Link>
                         </li>

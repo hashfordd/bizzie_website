@@ -473,3 +473,51 @@
     color: inherit !important;
   }
 }
+
+/* =============================================
+   NAVBAR SPECIFIC STYLING FOR CONTRAST
+   ============================================= */
+
+/* Navbar links and text - maximum contrast for light mode */
+.navbar-enhanced a,
+.navbar-enhanced button span,
+.navbar-enhanced button,
+.navbar-enhanced .text-regular {
+  @apply text-black !important;
+}
+
+.dark .navbar-enhanced a,
+.dark .navbar-enhanced button span,
+.dark .navbar-enhanced button,
+.dark .navbar-enhanced .text-regular {
+  @apply text-white !important;
+}
+
+/* Dropdown menu text - maximum contrast */
+.navbar-enhanced nav a,
+.navbar-enhanced nav h3 {
+  @apply text-black !important;
+}
+
+.dark .navbar-enhanced nav a,
+.dark .navbar-enhanced nav h3 {
+  @apply text-white !important;
+}
+
+/* Dropdown hover states */
+.navbar-enhanced nav a:hover {
+  @apply text-bizzie-700 !important;
+}
+
+.dark .navbar-enhanced nav a:hover {
+  @apply text-bizzie-300 !important;
+}
+
+/* Dropdown icons */
+.navbar-enhanced svg {
+  @apply text-black !important;
+}
+
+.dark .navbar-enhanced svg {
+  @apply text-white !important;
+}

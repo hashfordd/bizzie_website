@@ -64,36 +64,36 @@ export function Footer() {
           <div className="grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
             <ul>
               <li className="text-small py-2 font-semibold">
-                <a href="#">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Services</a>
+                <a href="/services">Services</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Testimonials</a>
+                <a href="/testimonials">Testimonials</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Contact Us</a>
+                <a href="/contact">Contact Us</a>
               </li>
             </ul>
             <ul>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Support Center</a>
+                <a href="/support">Support Center</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">FAQs</a>
+                <a href="/faq">FAQs</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Careers</a>
+                <a href="/careers">Careers</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Privacy Policy</a>
+                <a href="/privacy">Privacy Policy</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="#">Terms of Use</a>
+                <a href="/terms">Terms of Use</a>
               </li>
             </ul>
           </div>
@@ -103,13 +103,13 @@ export function Footer() {
           <p className="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
           <ul className="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
-              <a href="#">Privacy Policy</a>
+              <a href="/privacy">Privacy Policy</a>
             </li>
             <li className="underline">
-              <a href="#">Terms of Service</a>
+              <a href="/terms">Terms of Service</a>
             </li>
             <li className="underline">
-              <a href="#">Cookie Settings</a>
+              <a href="/cookies">Cookie Settings</a>
             </li>
           </ul>
         </div>

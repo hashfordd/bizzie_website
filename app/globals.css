@@ -467,9 +467,9 @@
     color: inherit !important;
   }
 
-  /* Fix Get started buttons in pricing table */
+  /* Fix Get started buttons in pricing table - dark background with white text */
   .dark .pricing-table button {
-    @apply text-bizzie-900 bg-white hover:bg-gray-100 border border-white rounded-lg !important;
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
   }
 
   /* Alternating section backgrounds for visual variety */

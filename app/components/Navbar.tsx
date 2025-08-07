@@ -184,13 +184,13 @@ export function Navbar() {
                   Roadmap
                 </Link>
                 <Link
-                  href="#"
+                  href="/support"
                   className="block py-3 text-left lg:px-4 lg:py-2"
                 >
                   Support Center
                 </Link>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="block py-3 text-left lg:px-4 lg:py-2"
                 >
                   Contact Us

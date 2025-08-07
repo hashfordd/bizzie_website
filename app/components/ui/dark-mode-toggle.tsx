@@ -33,7 +33,7 @@ export function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="relative p-2 rounded-lg bg-bizzie-100 hover:bg-bizzie-200 dark:bg-bizzie-800 dark:hover:bg-bizzie-700 transition-all duration-200"
+      className="relative h-11 w-11 rounded-lg bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 transition-all duration-200 flex items-center justify-center"
       aria-label="Toggle dark mode"
     >
       <motion.div
@@ -43,10 +43,10 @@ export function DarkModeToggle() {
           rotate: isDark ? 90 : 0,
         }}
         transition={{ duration: 0.2 }}
-        className="absolute inset-2"
+        className="absolute"
       >
         <svg
-          className="w-4 h-4 text-bizzie-700 dark:text-bizzie-300"
+          className="w-5 h-5 text-gray-700 dark:text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -67,10 +67,10 @@ export function DarkModeToggle() {
           rotate: isDark ? 0 : -90,
         }}
         transition={{ duration: 0.2 }}
-        className="absolute inset-2"
+        className="absolute"
       >
         <svg
-          className="w-4 h-4 text-bizzie-700 dark:text-bizzie-300"
+          className="w-5 h-5 text-gray-700 dark:text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -83,13 +83,6 @@ export function DarkModeToggle() {
           />
         </svg>
       </motion.div>
-      
-      {/* Invisible content to maintain button size */}
-      <div className="w-4 h-4 opacity-0">
-        <svg className="w-4 h-4" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="4" />
-        </svg>
-      </div>
     </button>
   );
 }

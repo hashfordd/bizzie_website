@@ -175,13 +175,13 @@ export function Navbar() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.3 }}
-                className="lg:absolute lg:top-full lg:left-0 lg:right-0 lg:w-full lg:bg-white lg:dark:bg-bizzie-900 lg:border-t lg:border-gray-200 lg:dark:border-bizzie-700 lg:shadow-lg"
+                className="lg:absolute lg:top-full lg:left-0 lg:right-0 lg:w-full lg:bg-white lg:dark:bg-bizzie-900 lg:border-t lg:border-gray-200 lg:dark:border-bizzie-700 lg:shadow-lg text-gray-900 dark:text-white"
               >
                 <div className="lg:px-[5%]">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 lg:py-8">
                     
                     {/* Core Features */}
-                    <div className="p-6 lg:border-r lg:border-gray-200 lg:dark:border-bizzie-700">
+                    <div className="p-6">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Core Features
                       </h3>
@@ -225,7 +225,7 @@ export function Navbar() {
                     </div>
 
                     {/* Business Tools */}
-                    <div className="p-6 lg:border-r lg:border-gray-200 lg:dark:border-bizzie-700">
+                    <div className="p-6">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Business Tools
                       </h3>
@@ -270,7 +270,7 @@ export function Navbar() {
                     </div>
 
                     {/* Resources */}
-                    <div className="p-6 lg:border-r lg:border-gray-200 lg:dark:border-bizzie-700">
+                    <div className="p-6">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Resources
                       </h3>

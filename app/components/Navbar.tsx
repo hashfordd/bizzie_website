@@ -175,13 +175,13 @@ export function Navbar() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.3 }}
-                className="lg:absolute lg:top-full lg:left-0 lg:right-0 lg:w-full lg:bg-white lg:dark:bg-bizzie-900 lg:border-t lg:border-gray-200 lg:dark:border-bizzie-700 lg:shadow-lg text-gray-900 dark:text-white"
+                className="lg:absolute lg:top-full lg:left-0 lg:right-0 lg:w-full !bg-white dark:!bg-bizzie-900 lg:border-t lg:border-gray-200 lg:dark:border-bizzie-700 lg:shadow-lg !text-gray-900 dark:!text-white"
               >
-                <div className="lg:px-[5%]">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 lg:py-8">
+                <div className="lg:px-[5%] !bg-white dark:!bg-bizzie-900">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 lg:py-8 !bg-white dark:!bg-bizzie-900">
                     
                     {/* Core Features */}
-                    <div className="p-6">
+                    <div className="p-6 !bg-white dark:!bg-bizzie-900">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Core Features
                       </h3>
@@ -225,7 +225,7 @@ export function Navbar() {
                     </div>
 
                     {/* Business Tools */}
-                    <div className="p-6">
+                    <div className="p-6 !bg-white dark:!bg-bizzie-900">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Business Tools
                       </h3>
@@ -270,7 +270,7 @@ export function Navbar() {
                     </div>
 
                     {/* Resources */}
-                    <div className="p-6">
+                    <div className="p-6 !bg-white dark:!bg-bizzie-900">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Resources
                       </h3>
@@ -315,7 +315,7 @@ export function Navbar() {
                     </div>
 
                     {/* Company */}
-                    <div className="p-6">
+                    <div className="p-6 !bg-white dark:!bg-bizzie-900">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-lg">
                         Company
                       </h3>
@@ -330,7 +330,7 @@ export function Navbar() {
                             <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-bizzie-600 dark:group-hover:text-bizzie-300">About Us</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Learn about our mission and team.</p>
                           </div>
-                        </Link>
+                </Link>
                         
                                                 <Link href="/careers" className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-bizzie-800/50 transition-colors group">
                           <div className="w-8 h-8 bg-gray-100 dark:bg-bizzie-700 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -343,7 +343,7 @@ export function Navbar() {
                             <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-bizzie-600 dark:group-hover:text-bizzie-300">Careers</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Join our growing team.</p>
                           </div>
-                        </Link>
+                </Link>
 
                                                 <Link href="/privacy" className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-bizzie-800/50 transition-colors group">
                           <div className="w-8 h-8 bg-gray-100 dark:bg-bizzie-700 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -355,7 +355,7 @@ export function Navbar() {
                             <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-bizzie-600 dark:group-hover:text-bizzie-300">Privacy & Legal</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Our commitment to your privacy.</p>
                           </div>
-                        </Link>
+                </Link>
                       </div>
                     </div>
 

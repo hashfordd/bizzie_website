@@ -2,6 +2,8 @@
 
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
+import { ContactForm } from "../../components/ui/contact-form";
+import Link from "next/link";
 
 export function PricingCallToAction() {
   return (
@@ -18,9 +20,17 @@ export function PricingCallToAction() {
           </div>
         </div>
         <div className="flex items-start justify-start gap-4">
-          <Button title="Sign Up">Sign Up</Button>
-          <Button title="Learn More" variant="secondary">
-            Learn More
+          <ContactForm 
+            triggerText="Sign Up" 
+            title="Start Your Free Trial"
+            description="Ready to transform your business? Let's get you started with Bizzie today."
+            variant="bizzie"
+            size="md"
+          />
+          <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+            <Link href="/features">
+              Learn More
+            </Link>
           </Button>
         </div>
       </div>

@@ -3,6 +3,8 @@
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { ChevronRight } from "relume-icons";
+import { ContactForm } from "../../components/ui/contact-form";
+import Link from "next/link";
 
 export function FeaturesAdvanced() {
   return (
@@ -40,17 +42,18 @@ export function FeaturesAdvanced() {
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More" variant="secondary">
-                Learn More
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
-              <Button
-                title="Sign Up"
-                variant="link"
-                size="link"
-                iconRight={<ChevronRight className="text-scheme-text" />}
-              >
-                Sign Up
-              </Button>
+              <ContactForm 
+                triggerText="Sign Up" 
+                title="Start Using Advanced Features"
+                description="Unlock powerful analytics and automation tools to grow your business."
+                variant="ghost"
+                size="sm"
+              />
             </div>
           </div>
           <div>

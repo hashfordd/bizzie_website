@@ -174,11 +174,14 @@
     @apply text-white !important;
   }
 
-  /* Fix text links to appear as plain text, not buttons */
+  /* Fix text links to appear as plain text, not buttons - more comprehensive */
   .dark a[class*="variant-link"],
   .dark .text-link,
-  .dark button[data-variant="link"] {
+  .dark button[data-variant="link"],
+  .dark button[class*="variant-link"],
+  .dark [class*="variant-link"] {
     background: none !important;
+    background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
     border-radius: 0 !important;
@@ -190,10 +193,35 @@
 
   .dark a[class*="variant-link"]:hover,
   .dark .text-link:hover,
-  .dark button[data-variant="link"]:hover {
+  .dark button[data-variant="link"]:hover,
+  .dark button[class*="variant-link"]:hover,
+  .dark [class*="variant-link"]:hover {
     background: none !important;
+    background-color: transparent !important;
     color: #CAD2C5 !important;
     text-decoration: underline;
+  }
+
+  /* Also fix any remaining button-like styling on links */
+  .dark a,
+  .dark button[variant="link"] {
+    background: transparent !important;
+  }
+
+  /* Fix footer text and links to be white against dark background */
+  .footer-enhanced,
+  .footer-enhanced * {
+    color: white !important;
+  }
+
+  .footer-enhanced a,
+  .footer-enhanced a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .footer-enhanced a:hover {
+    opacity: 0.8;
   }
 
   /* Enhanced button styling for all modes */

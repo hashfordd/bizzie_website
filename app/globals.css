@@ -174,29 +174,16 @@
     @apply text-white !important;
   }
 
-  /* Fix text links to appear as plain text, not buttons - more comprehensive */
-  .dark a[class*="variant-link"],
-  .dark .text-link,
-  .dark button[data-variant="link"],
-  .dark button[class*="variant-link"],
-  .dark [class*="variant-link"],
-  .dark [data-variant="link"],
-  .dark [class*="size-link"],
-  .dark button.variant-link,
-  .dark button[size="link"],
-  .dark button:contains("Learn More") {
+  /* Target only link-style buttons specifically */
+  .dark button[variant="link"],
+  .dark button[data-variant="link"] {
     background: none !important;
     background-color: transparent !important;
     border: none !important;
-    padding: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     color: white !important;
     text-decoration: underline;
-    font-weight: normal !important;
-    margin: 0 !important;
-    min-height: auto !important;
-    line-height: normal !important;
   }
 
   /* More specific targeting for Relume UI Button components with link variant */
@@ -213,37 +200,14 @@
     gap: 0.25rem !important;
   }
 
-  /* Ultra-specific override for all buttons in dark mode that contain Learn More */
-  .dark button:is([variant="link"], [size="link"], [data-variant="link"], [data-size="link"]) {
-    all: unset !important;
-    color: white !important;
-    text-decoration: underline !important;
-    cursor: pointer !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-  }
-
-  /* Emergency override - target any button with Learn More text specifically */
-  .dark div button {
-    background: transparent !important;
+  /* Very specific targeting for only variant="link" buttons - remove background only */
+  .dark button[variant="link"][size="link"] {
+    background-color: transparent !important;
+    background: none !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 0 !important;
     box-shadow: none !important;
-  }
-
-  .dark div button[variant="link"],
-  .dark div button[size="link"] {
-    all: unset !important;
-    color: white !important;
-    text-decoration: underline !important;
-    cursor: pointer !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
+    padding: 0 !important;
   }
 
   .dark a[class*="variant-link"]:hover,
@@ -259,8 +223,7 @@
     text-decoration: underline;
   }
 
-  /* Also fix any remaining button-like styling on links */
-  .dark a,
+  /* Only target link variant buttons, not all buttons */
   .dark button[variant="link"] {
     background: transparent !important;
   }
@@ -281,15 +244,15 @@
     opacity: 0.8;
   }
 
-  /* Enhanced button styling for all modes */
-  button,
-  .btn,
-  [role="button"] {
+  /* Enhanced button styling for regular buttons only (not link variants) */
+  button:not([variant="link"]),
+  .btn:not([variant="link"]),
+  [role="button"]:not([variant="link"]) {
     @apply rounded-lg transition-all duration-200 font-medium;
   }
 
-  /* Fix secondary buttons and other button variants in dark mode */
-  .dark button:not(.btn-primary):not([class*="bg-white"]):not([class*="bg-bizzie"]) {
+  /* Fix secondary buttons and other button variants in dark mode (exclude link variants) */
+  .dark button:not(.btn-primary):not([class*="bg-white"]):not([class*="bg-bizzie"]):not([variant="link"]) {
     @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
   }
 

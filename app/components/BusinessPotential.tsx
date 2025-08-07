@@ -3,7 +3,6 @@
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { ChevronRight } from "relume-icons";
-import Link from "next/link";
 
 export function BusinessPotential() {
   return (
@@ -45,10 +44,14 @@ export function BusinessPotential() {
               <Button title="Start" variant="secondary">
                 Start
               </Button>
-              <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700 dark:text-white dark:hover:text-bizzie-300 underline transition-colors">
+              <Button
+                title="Learn More"
+                variant="link"
+                size="link"
+                iconRight={<ChevronRight className="" />}
+              >
                 Learn More
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Link>
+              </Button>
             </div>
           </div>
           <div>

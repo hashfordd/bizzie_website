@@ -298,7 +298,11 @@
   }
 
   .pricing-table .feature-category-header {
-    @apply bg-gray-50 text-gray-900 !important;
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  .dark .pricing-table .feature-category-header {
+    @apply bg-bizzie-700 text-white !important;
   }
 
   .pricing-table .grid div {
@@ -329,9 +333,7 @@
     @apply bg-bizzie-800 border-bizzie-700;
   }
 
-  .dark .feature-category-header {
-    @apply bg-bizzie-700 text-white;
-  }
+
 
   .dark .pricing-table .grid div {
     @apply text-white border-bizzie-700 bg-bizzie-800;

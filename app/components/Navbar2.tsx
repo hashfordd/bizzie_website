@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { KeyboardArrowDown } from "relume-icons";
 import Link from "next/link";
+import { DarkModeToggle } from "./ui/dark-mode-toggle";
+import { ContactForm } from "./ui/contact-form";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,7 +44,7 @@ const useRelume = () => {
 export function Navbar2() {
   const useActive = useRelume();
   return (
-    <section className="z-[999] flex w-full items-center border-b border-sage-200 bg-white/90 backdrop-blur-md lg:min-h-18 lg:px-[5%] shadow-soft">
+    <section className="z-[999] flex w-full items-center border-b border-border bg-background/90 backdrop-blur-md lg:min-h-18 lg:px-[5%] shadow-soft">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
@@ -51,11 +53,15 @@ export function Navbar2() {
               alt="Logo image"
             />
           </Link>
-          <div className="flex items-center gap-4 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
+            <DarkModeToggle />
             <div>
-              <Button className="w-full px-4 py-1 bg-sage-600 hover:bg-sage-700 text-white transition-all duration-200 hover:scale-105" title="Start" size="sm">
-                Start
-              </Button>
+              <ContactForm 
+                triggerText="Start" 
+                title="Get Started with Bizzie"
+                description="Ready to transform your business? Let's discuss how Bizzie can help you achieve your goals."
+                size="sm"
+              />
             </div>
             <button
               className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
@@ -114,19 +120,19 @@ export function Navbar2() {
         >
           <Link
             href="/"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
           >
             Home Services
           </Link>
           <Link
             href="/pricing"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
           >
             Pricing Plans
           </Link>
           <Link
             href="/features"
-            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+            className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2 text-foreground hover:text-primary transition-colors"
           >
             Features List
           </Link>
@@ -191,10 +197,14 @@ export function Navbar2() {
             </AnimatePresence>
           </div>
         </motion.div>
-        <div className="hidden justify-self-end lg:block">
-          <Button className="px-6 py-2 bg-sage-600 hover:bg-sage-700 text-white transition-all duration-200 hover:scale-105 shadow-soft hover:shadow-soft-lg" title="Start" size="sm">
-            Start
-          </Button>
+        <div className="hidden justify-self-end lg:flex lg:items-center lg:gap-3">
+          <DarkModeToggle />
+          <ContactForm 
+            triggerText="Start" 
+            title="Get Started with Bizzie"
+            description="Ready to transform your business? Let's discuss how Bizzie can help you achieve your goals."
+            size="sm"
+          />
         </div>
       </div>
     </section>

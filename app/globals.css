@@ -4,19 +4,48 @@
 
 @layer base {
   :root {
-    --background: 248 250 248;
-    --foreground: 43 54 43;
-    --primary: 93 120 93;
-    --primary-foreground: 248 250 248;
-    --secondary: 227 233 227;
-    --secondary-foreground: 43 54 43;
-    --accent: 34 197 94;
-    --accent-foreground: 248 250 248;
-    --muted: 227 233 227;
-    --muted-foreground: 122 148 122;
-    --border: 199 212 199;
-    --input: 227 233 227;
-    --ring: 93 120 93;
+    --background: 247 249 247;
+    --foreground: 47 62 70;
+    --card: 255 255 255;
+    --card-foreground: 47 62 70;
+    --popover: 255 255 255;
+    --popover-foreground: 47 62 70;
+    --primary: 82 121 111;
+    --primary-foreground: 247 249 247;
+    --secondary: 202 210 197;
+    --secondary-foreground: 47 62 70;
+    --muted: 238 242 238;
+    --muted-foreground: 53 79 82;
+    --accent: 132 169 140;
+    --accent-foreground: 47 62 70;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --border: 221 229 221;
+    --input: 221 229 221;
+    --ring: 82 121 111;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 26 35 39;
+    --foreground: 202 210 197;
+    --card: 47 62 70;
+    --card-foreground: 202 210 197;
+    --popover: 47 62 70;
+    --popover-foreground: 202 210 197;
+    --primary: 132 169 140;
+    --primary-foreground: 26 35 39;
+    --secondary: 53 79 82;
+    --secondary-foreground: 202 210 197;
+    --muted: 53 79 82;
+    --muted-foreground: 132 169 140;
+    --accent: 82 121 111;
+    --accent-foreground: 202 210 197;
+    --destructive: 220 38 38;
+    --destructive-foreground: 248 250 252;
+    --border: 53 79 82;
+    --input: 53 79 82;
+    --ring: 132 169 140;
   }
 
   * {
@@ -24,7 +53,7 @@
   }
   
   body {
-    @apply bg-sage-50 text-sage-900 font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
   }
 
   .animate-on-scroll {
@@ -41,15 +70,19 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg hover:scale-105;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg hover:scale-105;
   }
   
   .btn-secondary {
-    @apply bg-sage-100 hover:bg-sage-200 text-sage-800 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-sage-300 hover:border-sage-400;
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-border hover:border-primary;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
 
   .card-enhanced {
-    @apply bg-white/80 backdrop-blur-sm border border-sage-200 rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 p-6;
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 p-6;
   }
 
   .image-enhanced {
@@ -57,10 +90,22 @@
   }
 
   .section-bg-subtle {
-    @apply bg-gradient-to-br from-sage-50 to-forest-50;
+    @apply bg-gradient-to-br from-bizzie-50 to-bizzie-100;
   }
 
   .section-bg-accent {
-    @apply bg-gradient-to-br from-sage-100 to-forest-100;
+    @apply bg-gradient-to-br from-bizzie-100 to-bizzie-200;
+  }
+
+  .section-bg-dark {
+    @apply bg-gradient-to-br from-bizzie-800 to-bizzie-900;
+  }
+
+  .input-enhanced {
+    @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .label-enhanced {
+    @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
   }
 }

@@ -111,26 +111,32 @@ export function FeaturesServices() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Services Grid - Compact Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <div key={index} className="bg-white dark:bg-bizzie-800 rounded-xl p-8 shadow-soft-lg border border-bizzie-200 dark:border-bizzie-700 hover:shadow-soft-xl transition-shadow">
-              <div className="w-20 h-20 bg-bizzie-600 rounded-xl flex items-center justify-center mb-6">
-                {service.icon}
+            <div key={index} className="bg-white dark:bg-bizzie-800 rounded-lg p-6 shadow-soft border border-bizzie-200 dark:border-bizzie-700 hover:shadow-soft-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-bizzie-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="scale-75">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold mb-2 leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-snug">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">
-                {service.title}
-              </h3>
-              <p className="mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center">
-                    <svg className="w-5 h-5 text-bizzie-600 dark:text-bizzie-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <li key={featureIndex} className="flex items-start text-sm">
+                    <svg className="w-4 h-4 text-bizzie-600 dark:text-bizzie-300 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    {feature}
+                    <span className="leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>

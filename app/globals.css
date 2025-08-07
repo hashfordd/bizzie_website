@@ -482,15 +482,32 @@
 .navbar-enhanced a,
 .navbar-enhanced button span,
 .navbar-enhanced button,
-.navbar-enhanced .text-regular {
-  @apply text-black !important;
+.navbar-enhanced .text-regular,
+section.navbar-enhanced a,
+section.navbar-enhanced button span,
+section.navbar-enhanced button {
+  color: #111827 !important; /* gray-900 for maximum contrast */
 }
 
 .dark .navbar-enhanced a,
 .dark .navbar-enhanced button span,
 .dark .navbar-enhanced button,
-.dark .navbar-enhanced .text-regular {
-  @apply text-white !important;
+.dark .navbar-enhanced .text-regular,
+.dark section.navbar-enhanced a,
+.dark section.navbar-enhanced button span,
+.dark section.navbar-enhanced button {
+  color: white !important;
+}
+
+/* Force main navigation hover states */
+.navbar-enhanced a:hover,
+section.navbar-enhanced a:hover {
+  color: #0ea5e9 !important; /* sky-500 */
+}
+
+.dark .navbar-enhanced a:hover,
+.dark section.navbar-enhanced a:hover {
+  color: #38bdf8 !important; /* sky-400 */
 }
 
 /* Dropdown menu text - maximum contrast */
@@ -520,6 +537,371 @@
 
 .dark .navbar-enhanced svg {
   @apply text-white !important;
+}
+
+/* FORCE dropdown background - ultra specific selector */
+section.navbar-enhanced nav,
+.navbar-enhanced > div nav,
+section.fixed.navbar-enhanced nav,
+section[class*="navbar-enhanced"] nav,
+/* New dropdown div selectors */
+div[class*="fixed"][class*="top-"],
+.fixed.bg-white.dark\\:bg-bizzie-900,
+div.fixed.shadow-lg {
+  background-color: white !important;
+  color: #111827 !important; /* gray-900 */
+}
+
+.dark section.navbar-enhanced nav,
+.dark .navbar-enhanced > div nav,
+.dark section.fixed.navbar-enhanced nav,
+.dark section[class*="navbar-enhanced"] nav,
+/* New dropdown div selectors for dark mode */
+.dark div[class*="fixed"][class*="top-"],
+.dark .fixed.bg-white.dark\\:bg-bizzie-900,
+.dark div.fixed.shadow-lg {
+  background-color: #0f172a !important; /* bizzie-900 equivalent */
+  color: white !important;
+}
+
+/* Force all children of dropdown to have correct background */
+section.navbar-enhanced nav > *,
+section.navbar-enhanced nav div,
+.navbar-enhanced nav > div > div,
+/* New dropdown div children */
+div.fixed.shadow-lg > *,
+div.fixed.shadow-lg div,
+.fixed.bg-white.dark\\:bg-bizzie-900 > *,
+.fixed.bg-white.dark\\:bg-bizzie-900 div {
+  background-color: inherit !important;
+}
+
+.dark section.navbar-enhanced nav > *,
+.dark section.navbar-enhanced nav div,
+.dark .navbar-enhanced nav > div > div,
+/* New dropdown div children for dark mode */
+.dark div.fixed.shadow-lg > *,
+.dark div.fixed.shadow-lg div,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 > *,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 div {
+  background-color: inherit !important;
+}
+
+/* FORCE all dropdown text elements to have proper contrast */
+section.navbar-enhanced nav h3,
+section.navbar-enhanced nav h4,
+section.navbar-enhanced nav a,
+section.navbar-enhanced nav p,
+section.navbar-enhanced nav span,
+section.navbar-enhanced nav div,
+.navbar-enhanced nav h3,
+.navbar-enhanced nav h4,
+.navbar-enhanced nav a,
+.navbar-enhanced nav p,
+.navbar-enhanced nav span,
+.navbar-enhanced nav div,
+section.navbar-enhanced motion.nav h3,
+section.navbar-enhanced motion.nav h4,
+section.navbar-enhanced motion.nav a,
+section.navbar-enhanced motion.nav p,
+section.navbar-enhanced motion.nav span,
+section.navbar-enhanced motion.nav div,
+/* New dropdown div text elements */
+div.fixed.shadow-lg h3,
+div.fixed.shadow-lg h4,
+div.fixed.shadow-lg a,
+div.fixed.shadow-lg p,
+div.fixed.shadow-lg span,
+.fixed.bg-white.dark\\:bg-bizzie-900 h3,
+.fixed.bg-white.dark\\:bg-bizzie-900 h4,
+.fixed.bg-white.dark\\:bg-bizzie-900 a,
+.fixed.bg-white.dark\\:bg-bizzie-900 p,
+.fixed.bg-white.dark\\:bg-bizzie-900 span {
+  color: #000000 !important; /* pure black for maximum contrast on white */
+}
+
+.dark section.navbar-enhanced nav h3,
+.dark section.navbar-enhanced nav h4,
+.dark section.navbar-enhanced nav a,
+.dark section.navbar-enhanced nav p,
+.dark section.navbar-enhanced nav span,
+.dark section.navbar-enhanced nav div,
+.dark .navbar-enhanced nav h3,
+.dark .navbar-enhanced nav h4,
+.dark .navbar-enhanced nav a,
+.dark .navbar-enhanced nav p,
+.dark .navbar-enhanced nav span,
+.dark .navbar-enhanced nav div,
+.dark section.navbar-enhanced motion.nav h3,
+.dark section.navbar-enhanced motion.nav h4,
+.dark section.navbar-enhanced motion.nav a,
+.dark section.navbar-enhanced motion.nav p,
+.dark section.navbar-enhanced motion.nav span,
+.dark section.navbar-enhanced motion.nav div,
+/* New dropdown div text elements for dark mode */
+.dark div.fixed.shadow-lg h3,
+.dark div.fixed.shadow-lg h4,
+.dark div.fixed.shadow-lg a,
+.dark div.fixed.shadow-lg p,
+.dark div.fixed.shadow-lg span,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 h3,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 h4,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 a,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 p,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 span {
+  color: #ffffff !important; /* pure white for maximum contrast on dark */
+}
+
+/* Force dropdown icons to match text */
+section.navbar-enhanced nav svg,
+.navbar-enhanced nav svg,
+/* New dropdown div icons */
+div.fixed.shadow-lg svg,
+.fixed.bg-white.dark\\:bg-bizzie-900 svg {
+  color: #111827 !important; /* gray-900 */
+  fill: currentColor !important;
+}
+
+.dark section.navbar-enhanced nav svg,
+.dark .navbar-enhanced nav svg,
+/* New dropdown div icons for dark mode */
+.dark div.fixed.shadow-lg svg,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 svg {
+  color: white !important;
+  fill: currentColor !important;
+}
+
+/* Ensure hover states work properly */
+section.navbar-enhanced nav a:hover,
+.navbar-enhanced nav a:hover,
+/* New dropdown div hover states - only text color, no background */
+div.fixed.shadow-lg a:hover,
+.fixed.bg-white.dark\\:bg-bizzie-900 a:hover,
+div.fixed.shadow-lg a:hover h4,
+.fixed.bg-white.dark\\:bg-bizzie-900 a:hover h4 {
+  color: #059669 !important; /* emerald-600 for hover - green as requested */
+}
+
+.dark section.navbar-enhanced nav a:hover,
+.dark .navbar-enhanced nav a:hover,
+/* New dropdown div hover states for dark mode - only text color, no background */
+.dark div.fixed.shadow-lg a:hover,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 a:hover,
+.dark div.fixed.shadow-lg a:hover h4,
+.dark .fixed.bg-white.dark\\:bg-bizzie-900 a:hover h4 {
+  color: #10b981 !important; /* emerald-500 for dark mode hover - green as requested */
+}
+
+/* Dark mode toggle button styling */
+.navbar-enhanced button[aria-label*="toggle"] {
+  background-color: white !important;
+  border: 1px solid #e5e7eb !important; /* gray-200 */
+  color: #374151 !important; /* gray-700 */
+}
+
+.dark .navbar-enhanced button[aria-label*="toggle"] {
+  background-color: #374151 !important; /* gray-700 */
+  border: 1px solid #6b7280 !important; /* gray-500 */
+  color: white !important;
+}
+
+.navbar-enhanced button[aria-label*="toggle"]:hover {
+  background-color: #f9fafb !important; /* gray-50 */
+}
+
+.dark .navbar-enhanced button[aria-label*="toggle"]:hover {
+  background-color: #4b5563 !important; /* gray-600 */
+}
+
+/* ULTRA-SPECIFIC: Force dropdown background with highest specificity */
+section.navbar-enhanced ~ div.fixed[class*="top-"],
+section[class*="navbar-enhanced"] ~ div.fixed.shadow-lg,
+div.fixed.w-full.bg-white.dark\\:bg-bizzie-900.shadow-lg {
+  background-color: white !important;
+  color: #111827 !important;
+}
+
+.dark section.navbar-enhanced ~ div.fixed[class*="top-"],
+.dark section[class*="navbar-enhanced"] ~ div.fixed.shadow-lg,
+.dark div.fixed.w-full.bg-white.dark\\:bg-bizzie-900.shadow-lg {
+  background-color: #0f172a !important; /* bizzie-900 */
+  color: white !important;
+}
+
+/* FORCE "More Info" button to have no background - just like other nav links */
+.navbar-enhanced nav button,
+.navbar-enhanced button.text-regular,
+section.navbar-enhanced nav button,
+section.navbar-enhanced button.text-regular,
+.navbar-enhanced button[class*="flex"][class*="items-center"],
+section.navbar-enhanced button[class*="flex"][class*="items-center"] {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.75rem 1.5rem !important; /* Same as nav links */
+}
+
+/* Ensure More Info button text color matches other nav links */
+.navbar-enhanced nav button,
+.navbar-enhanced button.text-regular,
+section.navbar-enhanced nav button,
+section.navbar-enhanced button.text-regular {
+  color: #111827 !important; /* same as other nav links */
+}
+
+.dark .navbar-enhanced nav button,
+.dark .navbar-enhanced button.text-regular,
+.dark section.navbar-enhanced nav button,
+.dark section.navbar-enhanced button.text-regular {
+  color: white !important;
+}
+
+/* More Info button hover states */
+.navbar-enhanced nav button:hover,
+.navbar-enhanced button.text-regular:hover,
+section.navbar-enhanced nav button:hover,
+section.navbar-enhanced button.text-regular:hover {
+  color: #0ea5e9 !important; /* sky-500 same as other nav links */
+}
+
+.dark .navbar-enhanced nav button:hover,
+.dark .navbar-enhanced button.text-regular:hover,
+.dark section.navbar-enhanced nav button:hover,
+.dark section.navbar-enhanced button.text-regular:hover {
+  color: #38bdf8 !important; /* sky-400 for dark mode */
+}
+
+/* FINAL OVERRIDE: Dropdown background with maximum specificity */
+section.navbar-enhanced[class*="fixed"] ~ div[class*="fixed"][class*="top-"][class*="left-0"][class*="right-0"] {
+  background-color: white !important;
+  color: #111827 !important;
+}
+
+/* ROADMAP TIMELINE LIGHT MODE ENFORCEMENT */
+.roadmap-timeline-light {
+  background-color: rgba(239, 246, 255, 0.3) !important; /* blue-50/30 equivalent */
+  color: #111827 !important;
+}
+
+.roadmap-timeline-light h2,
+.roadmap-timeline-light h3,
+.roadmap-timeline-light h4 {
+  color: #111827 !important;
+}
+
+.roadmap-timeline-light p,
+.roadmap-timeline-light span,
+.roadmap-timeline-light div {
+  color: #4b5563 !important;
+}
+
+.roadmap-timeline-light .timeline-content {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.roadmap-timeline-light .timeline-content h3 {
+  color: #111827 !important;
+}
+
+.roadmap-timeline-light .timeline-content p {
+  color: #4b5563 !important;
+}
+
+.dark .roadmap-timeline-light {
+  background-color: #111827 !important;
+  color: #ffffff !important;
+}
+
+.dark .roadmap-timeline-light h2,
+.dark .roadmap-timeline-light h3,
+.dark .roadmap-timeline-light h4 {
+  color: #ffffff !important;
+}
+
+.dark .roadmap-timeline-light p,
+.dark .roadmap-timeline-light span,
+.dark .roadmap-timeline-light div {
+  color: #d1d5db !important;
+}
+
+.dark .roadmap-timeline-light .timeline-content {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #ffffff !important;
+}
+
+.dark section.navbar-enhanced[class*="fixed"] ~ div[class*="fixed"][class*="top-"][class*="left-0"][class*="right-0"] {
+  background-color: #0f172a !important;
+  color: white !important;
+}
+
+/* Ultimate dropdown text color enforcement */
+section.navbar-enhanced ~ div[class*="fixed"] h3,
+section.navbar-enhanced ~ div[class*="fixed"] h4,
+section.navbar-enhanced ~ div[class*="fixed"] a,
+section.navbar-enhanced ~ div[class*="fixed"] p,
+section.navbar-enhanced ~ div[class*="fixed"] span {
+  color: #000000 !important;
+}
+
+.dark section.navbar-enhanced ~ div[class*="fixed"] h3,
+.dark section.navbar-enhanced ~ div[class*="fixed"] h4,
+.dark section.navbar-enhanced ~ div[class*="fixed"] a,
+.dark section.navbar-enhanced ~ div[class*="fixed"] p,
+.dark section.navbar-enhanced ~ div[class*="fixed"] span {
+  color: #ffffff !important;
+}
+
+/* =============================================
+   FEATURES PAGE SERVICES SECTION STYLING
+   ============================================= */
+
+/* Force proper contrast for services section cards */
+.section-bg-light-accent .bg-bizzie-600 {
+  background-color: #1e293b !important; /* slate-800 for better light mode contrast */
+}
+
+.section-bg-light-accent h2,
+.section-bg-light-accent h3,
+.section-bg-light-accent h4,
+.section-bg-light-accent h5 {
+  color: #1f2937 !important; /* gray-800 */
+}
+
+.section-bg-light-accent p,
+.section-bg-light-accent li {
+  color: #374151 !important; /* gray-700 */
+}
+
+/* Dark mode styling for services section */
+.dark .section-bg-light-accent .bg-bizzie-600 {
+  background-color: #059669 !important; /* emerald-600 */
+}
+
+.dark .section-bg-light-accent h2,
+.dark .section-bg-light-accent h3,
+.dark .section-bg-light-accent h4,
+.dark .section-bg-light-accent h5 {
+  color: white !important;
+}
+
+.dark .section-bg-light-accent p,
+.dark .section-bg-light-accent li {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Force service card backgrounds for better contrast */
+.section-bg-light-accent .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.dark .section-bg-light-accent .bg-white {
+  background-color: #1f2937 !important; /* gray-800 */
+  border: 1px solid #374151 !important;
 }
 
 /* =============================================

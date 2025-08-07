@@ -173,12 +173,18 @@
   .dark [role="button"],
   .dark .btn-secondary button,
   .dark button[class*="variant-secondary"] {
-    @apply text-white !important;
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border-bizzie-600 !important;
   }
 
   /* Ensure button text is always visible in dark mode */
   .dark button:not(.btn-primary):not([class*="bg-white"]) {
-    @apply text-white !important;
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 !important;
+  }
+
+  /* Fix timeline and roadmap buttons specifically */
+  .dark .timeline button,
+  .dark .roadmap button {
+    @apply bg-bizzie-700 hover:bg-bizzie-600 text-white border-bizzie-600 !important;
   }
 
   /* Improve pricing table dark mode theming */
@@ -195,5 +201,41 @@
   .dark .grid p,
   .dark .grid div {
     @apply text-white;
+  }
+
+  /* Enhanced pricing table dark mode styling */
+  .dark .pricing-table .grid {
+    @apply bg-bizzie-800 border-bizzie-700;
+  }
+
+  .dark .pricing-table .grid > div {
+    @apply bg-bizzie-800 border-bizzie-700 text-white;
+  }
+
+  .dark .pricing-table .grid > p {
+    @apply text-white;
+  }
+
+  /* Improve feature category headers in dark mode */
+  .dark .feature-category-header {
+    @apply bg-bizzie-700 text-white;
+  }
+
+  /* Fix pricing table cell content in dark mode */
+  .dark .pricing-table .grid div {
+    @apply text-white border-bizzie-700;
+  }
+
+  .dark .pricing-table .grid p {
+    @apply text-white;
+  }
+
+  /* Fix checkmarks and table cell borders in dark mode */
+  .dark .pricing-table svg {
+    @apply text-bizzie-300;
+  }
+
+  .dark .pricing-table .border-l {
+    @apply border-bizzie-700;
   }
 }

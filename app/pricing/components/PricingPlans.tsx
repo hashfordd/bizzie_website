@@ -6,7 +6,7 @@ import { Check } from "relume-icons";
 
 export function PricingPlans() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-white dark:bg-bizzie-900">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Pricing</p>
@@ -15,7 +15,7 @@ export function PricingPlans() {
             Choose the best plan for your business needs
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full pricing-table">
           <div className="grid grid-cols-3 border-b border-scheme-border bg-scheme-background dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr] shadow-md">
             <div className="hidden md:block" />
             <div className="flex h-full flex-col justify-between border-0 border-scheme-border px-3 py-6 sm:px-5 sm:py-8 md:border-l lg:px-8 lg:py-10">
@@ -73,10 +73,10 @@ export function PricingPlans() {
               </div>
             </div>
           </div>
-          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-800">
-            <h3 className="heading-h6 font-bold px-4 md:px-6">Feature Category</h3>
+          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-700 feature-category-header">
+            <h3 className="heading-h6 font-bold px-4 md:px-6 text-bizzie-900 dark:text-white">Feature Category</h3>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               User Accounts Management
             </p>
@@ -90,7 +90,7 @@ export function PricingPlans() {
               Unlimited
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Job Costing Tools
             </p>
@@ -104,7 +104,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Financial Reporting Features
             </p>
@@ -118,7 +118,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Mobile App Access
             </p>
@@ -130,7 +130,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Customer Support
             </p>
@@ -140,10 +140,10 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-800">
-            <h3 className="heading-h6 font-bold px-4 md:px-6">Feature Category</h3>
+          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-700 feature-category-header">
+            <h3 className="heading-h6 font-bold px-4 md:px-6 text-bizzie-900 dark:text-white">Feature Category</h3>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Invoicing Capabilities
             </p>
@@ -157,7 +157,7 @@ export function PricingPlans() {
               Unlimited
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Expense Tracking
             </p>
@@ -171,7 +171,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Service Pricing Tools
             </p>
@@ -185,7 +185,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Customizable Dashboard
             </p>
@@ -197,7 +197,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Data Analytics
             </p>
@@ -207,10 +207,10 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-800">
-            <h3 className="heading-h6 font-bold px-4 md:px-6">Feature Category</h3>
+          <div className="border-b border-scheme-border py-5 bg-bizzie-50 dark:bg-bizzie-700 feature-category-header">
+            <h3 className="heading-h6 font-bold px-4 md:px-6 text-bizzie-900 dark:text-white">Feature Category</h3>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Performance Metrics
             </p>
@@ -224,7 +224,7 @@ export function PricingPlans() {
               Unlimited
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Integration Options
             </p>
@@ -238,7 +238,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Cloud Storage
             </p>
@@ -252,7 +252,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               Security Features
             </p>
@@ -264,7 +264,7 @@ export function PricingPlans() {
               <Check className="size-6 text-scheme-text" />
             </div>
           </div>
-          <div className="grid grid-cols-3 border-b border-scheme-border md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-white dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <p className="col-span-3 row-span-1 border-b border-scheme-border py-4 pr-4 md:col-span-1 md:border-0 md:pr-6">
               User-Friendly Interface
             </p>

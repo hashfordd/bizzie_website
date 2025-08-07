@@ -175,14 +175,14 @@ export function Navbar() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.2 }}
-                className="bg-scheme-background lg:absolute lg:z-50 lg:border lg:border-scheme-border lg:left-0 lg:right-0 lg:w-screen lg:max-w-none lg:[--y-close:25%]"
+                className="bg-white dark:bg-bizzie-800 border border-gray-200 dark:border-bizzie-600 shadow-xl lg:absolute lg:z-50 lg:left-0 lg:right-0 lg:w-screen lg:max-w-none lg:[--y-close:25%]"
               >
-                <div className="px-4 py-6 lg:px-8 lg:py-8">
+                <div className="px-4 py-6 lg:px-8 lg:py-8 bg-gray-50 dark:bg-bizzie-700">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     {/* Company Section */}
-                    <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                    <div className="p-4 bg-white dark:bg-bizzie-800 rounded-lg border border-gray-100 dark:border-bizzie-600">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Company
                       </h3>
                       <ul className="space-y-3">
@@ -210,8 +210,8 @@ export function Navbar() {
                     </div>
 
                     {/* Products & Services */}
-                    <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                    <div className="p-4 bg-white dark:bg-bizzie-800 rounded-lg border border-gray-100 dark:border-bizzie-600">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Products & Services
                       </h3>
                       <ul className="space-y-3">
@@ -244,8 +244,8 @@ export function Navbar() {
                     </div>
 
                     {/* Support & Resources */}
-                    <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                    <div className="p-4 bg-white dark:bg-bizzie-800 rounded-lg border border-gray-100 dark:border-bizzie-600">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Support & Resources
                       </h3>
                       <ul className="space-y-3">
@@ -268,8 +268,8 @@ export function Navbar() {
                     </div>
 
                     {/* Legal & Policies */}
-                    <div>
-                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                    <div className="p-4 bg-white dark:bg-bizzie-800 rounded-lg border border-gray-100 dark:border-bizzie-600">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
                         Legal & Policies
                       </h3>
                       <ul className="space-y-3">

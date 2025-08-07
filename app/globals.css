@@ -925,12 +925,21 @@ td {
    ============================================= */
 
 /* Ensure all buttons use consistent styling */
-button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not([class*="btn-"]) {
+button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not(.btn-nav):not([class*="btn-"]) {
   @apply bg-bizzie-600 hover:bg-bizzie-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200;
 }
 
-.dark button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not([class*="btn-"]) {
+.dark button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not(.btn-nav):not([class*="btn-"]) {
   @apply bg-bizzie-300 hover:bg-bizzie-200 text-bizzie-900;
+}
+
+/* Navigation button styling - no background, just text */
+.btn-nav {
+  @apply bg-transparent hover:bg-transparent border-none text-current;
+}
+
+.dark .btn-nav {
+  @apply bg-transparent hover:bg-transparent border-none text-current;
 }
 
 /* Ensure all cards have consistent styling */

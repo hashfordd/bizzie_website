@@ -16,57 +16,57 @@ export function PricingPlans() {
           </p>
         </div>
         <div className="w-full">
-          <div className="sticky top-16 md:top-18 grid grid-cols-3 border-b border-scheme-border bg-scheme-background md:grid-cols-[1.5fr_1fr_1fr_1fr] z-10">
+          <div className="sticky top-16 md:top-18 grid grid-cols-3 border-b border-scheme-border bg-scheme-background md:grid-cols-[1.5fr_1fr_1fr_1fr] z-10 shadow-md">
             <div className="hidden md:block" />
-            <div className="flex h-full flex-col justify-between border-0 border-scheme-border px-2 py-4 sm:px-4 sm:py-6 md:border-l lg:px-6 lg:py-8">
-              <div>
-                <h2 className="heading-h6 font-bold">Basic</h2>
-                <div className="my-3 md:my-4">
-                  <p className="heading-h1 font-bold">$19</p>
-                  <p className="font-bold">Per month</p>
+            <div className="flex h-full flex-col justify-between border-0 border-scheme-border px-3 py-6 sm:px-5 sm:py-8 md:border-l lg:px-8 lg:py-10">
+              <div className="text-center">
+                <h2 className="text-xl font-bold mb-4 text-bizzie-900 dark:text-white">Basic</h2>
+                <div className="mb-4">
+                  <p className="text-3xl lg:text-4xl font-bold text-bizzie-600 dark:text-bizzie-300">$19</p>
+                  <p className="text-sm font-medium text-bizzie-700 dark:text-bizzie-400 mt-1">Per month</p>
                 </div>
-                <p>Ideal for solo contractors</p>
+                <p className="text-sm text-bizzie-600 dark:text-bizzie-400 mb-6">Ideal for solo contractors</p>
               </div>
-              <div className="mt-6 md:mt-8">
+              <div>
                 <Button
                   title="Get started"
-                  className="w-full px-3 py-1 whitespace-normal sm:px-4 sm:py-3"
+                  className="w-full px-4 py-3 btn-primary"
                 >
                   Get started
                 </Button>
               </div>
             </div>
-            <div className="flex h-full flex-col justify-between border-l border-scheme-border px-2 py-4 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
-              <div>
-                <h2 className="heading-h6 font-bold">Business</h2>
-                <div className="my-3 md:my-4">
-                  <p className="heading-h1 font-bold">$29</p>
-                  <p className="font-bold">Per month</p>
+            <div className="flex h-full flex-col justify-between border-l border-scheme-border px-3 py-6 sm:px-5 sm:py-8 lg:px-8 lg:py-10">
+              <div className="text-center">
+                <h2 className="text-xl font-bold mb-4 text-bizzie-900 dark:text-white">Business</h2>
+                <div className="mb-4">
+                  <p className="text-3xl lg:text-4xl font-bold text-bizzie-600 dark:text-bizzie-300">$29</p>
+                  <p className="text-sm font-medium text-bizzie-700 dark:text-bizzie-400 mt-1">Per month</p>
                 </div>
-                <p>Perfect for small teams</p>
+                <p className="text-sm text-bizzie-600 dark:text-bizzie-400 mb-6">Perfect for small teams</p>
               </div>
-              <div className="mt-6 md:mt-8">
+              <div>
                 <Button
                   title="Get started"
-                  className="w-full px-3 py-1 whitespace-normal sm:px-4 sm:py-3"
+                  className="w-full px-4 py-3 btn-primary"
                 >
                   Get started
                 </Button>
               </div>
             </div>
-            <div className="flex h-full flex-col justify-between border-l border-scheme-border px-2 py-4 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
-              <div>
-                <h2 className="heading-h6 font-bold">Enterprise</h2>
-                <div className="my-3 md:my-4">
-                  <p className="heading-h1 font-bold">$49</p>
-                  <p className="font-bold">Per month</p>
+            <div className="flex h-full flex-col justify-between border-l border-scheme-border px-3 py-6 sm:px-5 sm:py-8 lg:px-8 lg:py-10">
+              <div className="text-center">
+                <h2 className="text-xl font-bold mb-4 text-bizzie-900 dark:text-white">Enterprise</h2>
+                <div className="mb-4">
+                  <p className="text-3xl lg:text-4xl font-bold text-bizzie-600 dark:text-bizzie-300">$49</p>
+                  <p className="text-sm font-medium text-bizzie-700 dark:text-bizzie-400 mt-1">Per month</p>
                 </div>
-                <p>For growing businesses</p>
+                <p className="text-sm text-bizzie-600 dark:text-bizzie-400 mb-6">For growing businesses</p>
               </div>
-              <div className="mt-6 md:mt-8">
+              <div>
                 <Button
                   title="Get started"
-                  className="w-full px-3 py-1 whitespace-normal sm:px-4 sm:py-3"
+                  className="w-full px-4 py-3 btn-primary"
                 >
                   Get started
                 </Button>

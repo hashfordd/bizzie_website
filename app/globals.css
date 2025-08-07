@@ -156,4 +156,15 @@
   .dark .bg-bizzie-100 .text-bizzie-500 {
     @apply text-white !important;
   }
+
+  /* Fix Learn More link buttons in dark mode */
+  .dark [data-variant="link"],
+  .dark button[class*="variant-link"],
+  .dark .btn-link {
+    @apply text-white !important;
+  }
+
+  .dark .text-scheme-text {
+    @apply text-white !important;
+  }
 }

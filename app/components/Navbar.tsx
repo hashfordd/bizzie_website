@@ -196,16 +196,7 @@ export function Navbar() {
                             Careers
                           </Link>
                         </li>
-                        <li>
-                          <Link href="/blog" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
-                            Blog
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/testimonials" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
-                            Testimonials
-                          </Link>
-                        </li>
+
                       </ul>
                     </div>
 
@@ -235,11 +226,7 @@ export function Navbar() {
                             Product Roadmap
                           </Link>
                         </li>
-                        <li>
-                          <Link href="/demo" className="block py-1 text-black dark:text-white hover:text-bizzie-700 dark:hover:text-bizzie-300 transition-colors">
-                            Live Demo
-                          </Link>
-                        </li>
+
                       </ul>
                     </div>
 

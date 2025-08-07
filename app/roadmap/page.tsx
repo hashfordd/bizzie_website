@@ -1,26 +1,28 @@
 import React from "react";
-import { Navbar2 } from "../components/Navbar2";
-import { Header47 } from "./components/Header47";
-import { Layout10 } from "./components/Layout10";
-import { Layout18 } from "./components/Layout18";
-import { Layout22 } from "./components/Layout22";
-import { Layout238 } from "./components/Layout238";
-import { Timeline15 } from "./components/Timeline15";
-import { Cta13 } from "./components/Cta13";
-import { Footer3 } from "../components/Footer3";
+import { Navbar } from "../components/Navbar";
+import { RoadmapHero } from "./components/RoadmapHero";
+import { RoadmapOverview } from "./components/RoadmapOverview";
+import { RoadmapFeatures } from "./components/RoadmapFeatures";
+import { RoadmapBenefits } from "./components/RoadmapBenefits";
+import { RoadmapMilestones } from "./components/RoadmapMilestones";
+import { RoadmapTimeline } from "./components/RoadmapTimeline";
+import { RoadmapCallToAction } from "./components/RoadmapCallToAction";
+import { Footer } from "../components/Footer";
 
 export default function RoadmapPage() {
   return (
     <div>
-      <Navbar2 />
-      <Header47 />
-      <Layout10 />
-      <Layout18 />
-      <Layout22 />
-      <Layout238 />
-      <Timeline15 />
-      <Cta13 />
-      <Footer3 />
+      <Navbar />
+      <div className="pt-16 md:pt-18">
+        <RoadmapHero />
+      </div>
+      <RoadmapOverview />
+      <RoadmapFeatures />
+      <RoadmapBenefits />
+      <RoadmapMilestones />
+      <RoadmapTimeline />
+      <RoadmapCallToAction />
+      <Footer />
     </div>
   );
 }

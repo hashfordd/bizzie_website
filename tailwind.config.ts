@@ -8,81 +8,51 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   presets: [relumeTailwindPreset],
-  darkMode: ['class'],
   theme: {
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
         'bizzie': {
-          50: '#f7f9f7',
-          100: '#eef2ee',
-          200: '#dde5dd',
-          300: '#CAD2C5',
-          400: '#b1c0b1',
-          500: '#84A98C',
-          600: '#6b8e73',
-          700: '#52796F',
-          800: '#354F52',
-          900: '#2F3E46',
-          950: '#1a2327',
+          50: '#f8faf9',
+          100: '#CAD2C5',  // Light sage/green
+          200: '#b8c4b8',
+          300: '#a6b7a6', 
+          400: '#84A98C',  // Medium sage/green
+          500: '#6b8b73',
+          600: '#52796F',  // Darker sage/green
+          700: '#456661',
+          800: '#354F52',  // Dark teal/green
+          900: '#2F3E46',  // Darkest teal/green
         },
         'sage': {
-          50: '#f7f9f7',
-          100: '#eef2ee',
-          200: '#dde5dd',
-          300: '#CAD2C5',
-          400: '#b1c0b1',
-          500: '#84A98C',
-          600: '#6b8e73',
-          700: '#52796F',
+          50: '#f8faf9',
+          100: '#CAD2C5',
+          200: '#b8c4b8',
+          300: '#a6b7a6',
+          400: '#84A98C',
+          500: '#6b8b73',
+          600: '#52796F',
+          700: '#456661',
           800: '#354F52',
           900: '#2F3E46',
-          950: '#1a2327',
+        },
+        'forest': {
+          50: '#f8faf9',
+          100: '#CAD2C5',
+          200: '#b8c4b8',
+          300: '#a6b7a6',
+          400: '#84A98C',
+          500: '#6b8b73',
+          600: '#52796F',
+          700: '#456661',
+          800: '#354F52',
+          900: '#2F3E46',
         }
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(47, 62, 70, 0.07), 0 10px 20px -2px rgba(47, 62, 70, 0.04)',
-        'soft-lg': '0 10px 15px -3px rgba(47, 62, 70, 0.1), 0 4px 6px -2px rgba(47, 62, 70, 0.05)',
-        'bizzie-glow': '0 0 20px rgba(132, 169, 140, 0.3)',
-        'sage-glow': '0 0 15px rgba(82, 121, 111, 0.2)',
-        'dark-soft': '0 2px 15px -3px rgba(0, 0, 0, 0.25), 0 10px 20px -2px rgba(0, 0, 0, 0.15)',
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'soft-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'green-glow': '0 0 20px rgba(34, 197, 94, 0.3)',
+        'sage-glow': '0 0 15px rgba(93, 120, 93, 0.2)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

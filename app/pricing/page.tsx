@@ -1,22 +1,24 @@
 import React from "react";
-import { Navbar2 } from "../components/Navbar2";
-import { Header50 } from "./components/Header50";
-import { Pricing21 } from "./components/Pricing21";
-import { Pricing5 } from "./components/Pricing5";
-import { Testimonial10 } from "./components/Testimonial10";
-import { Cta7 } from "./components/Cta7";
-import { Footer3 } from "../components/Footer3";
+import { Navbar } from "../components/Navbar";
+import { PricingHero } from "./components/PricingHero";
+import { PricingPlans } from "./components/PricingPlans";
+import { PricingFeatures } from "./components/PricingFeatures";
+import { PricingTestimonials } from "./components/PricingTestimonials";
+import { PricingCallToAction } from "./components/PricingCallToAction";
+import { Footer } from "../components/Footer";
 
 export default function PricingPage() {
   return (
     <div>
-      <Navbar2 />
-      <Header50 />
-      <Pricing21 />
-      <Pricing5 />
-      <Testimonial10 />
-      <Cta7 />
-      <Footer3 />
+      <Navbar />
+      <div className="pt-16 md:pt-18">
+        <PricingHero />
+      </div>
+      <PricingPlans />
+      <PricingFeatures />
+      <PricingTestimonials />
+      <PricingCallToAction />
+      <Footer />
     </div>
   );
 }

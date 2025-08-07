@@ -21,18 +21,7 @@
     "framer-motion": "^10.16.0",
     "relume-icons": "^1.0.0",
     "aws-amplify": "^6.0.0",
-    "@aws-amplify/ui-react": "^6.0.0",
-    "@radix-ui/react-slot": "^1.0.2",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-toast": "^1.1.5",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0",
-    "react-hook-form": "^7.47.0",
-    "@hookform/resolvers": "^3.3.2",
-    "zod": "^3.22.4",
-    "next-themes": "^0.2.1",
-    "lucide-react": "^0.294.0"
+    "@aws-amplify/ui-react": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

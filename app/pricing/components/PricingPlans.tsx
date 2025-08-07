@@ -16,7 +16,7 @@ export function PricingPlans() {
           </p>
         </div>
         <div className="w-full">
-          <div className="sticky top-16 md:top-18 grid grid-cols-3 border-b border-scheme-border bg-scheme-background md:grid-cols-[1.5fr_1fr_1fr_1fr] z-10 shadow-md">
+          <div className="grid grid-cols-3 border-b border-scheme-border bg-scheme-background dark:bg-bizzie-800 md:grid-cols-[1.5fr_1fr_1fr_1fr] shadow-md">
             <div className="hidden md:block" />
             <div className="flex h-full flex-col justify-between border-0 border-scheme-border px-3 py-6 sm:px-5 sm:py-8 md:border-l lg:px-8 lg:py-10">
               <div className="text-center">

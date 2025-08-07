@@ -167,4 +167,33 @@
   .dark .text-scheme-text {
     @apply text-white !important;
   }
+
+  /* Fix secondary buttons and other button variants in dark mode */
+  .dark button,
+  .dark [role="button"],
+  .dark .btn-secondary button,
+  .dark button[class*="variant-secondary"] {
+    @apply text-white !important;
+  }
+
+  /* Ensure button text is always visible in dark mode */
+  .dark button:not(.btn-primary):not([class*="bg-white"]) {
+    @apply text-white !important;
+  }
+
+  /* Improve pricing table dark mode theming */
+  .dark .border-scheme-border {
+    @apply border-bizzie-700 !important;
+  }
+
+  .dark .bg-scheme-background {
+    @apply bg-bizzie-800 !important;
+  }
+
+  /* Fix all table text in dark mode */
+  .dark table,
+  .dark .grid p,
+  .dark .grid div {
+    @apply text-white;
+  }
 }

@@ -118,7 +118,7 @@ export function Navbar() {
           initial="close"
           exit="close"
           transition={{ duration: 0.4 }}
-          className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+          className="overflow-hidden px-[5%] text-left lg:flex lg:items-center lg:justify-start lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           <Link
             href="/"
@@ -179,19 +179,19 @@ export function Navbar() {
               >
                 <Link
                   href="/roadmap"
-                  className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
+                  className="block py-3 text-left lg:px-4 lg:py-2"
                 >
                   Roadmap
                 </Link>
                 <Link
                   href="#"
-                  className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
+                  className="block py-3 text-left lg:px-4 lg:py-2"
                 >
                   Support Center
                 </Link>
                 <Link
                   href="#"
-                  className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
+                  className="block py-3 text-left lg:px-4 lg:py-2"
                 >
                   Contact Us
                 </Link>

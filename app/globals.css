@@ -186,6 +186,63 @@
     text-decoration: underline;
   }
 
+  /* Target the specific Learn More button structure */
+  .dark button[title*="Learn More"],
+  .dark button:has(svg):contains("Learn More"),
+  .dark .inline-flex.items-center.justify-center[title*="Learn More"] {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    ring-offset-color: transparent !important;
+    color: white !important;
+    text-decoration: underline !important;
+  }
+
+  /* Remove ring/focus backgrounds specifically */
+  .dark button.ring-offset-white,
+  .dark button[class*="ring-offset"],
+  .dark button.text-text-primary {
+    background: transparent !important;
+    background-color: transparent !important;
+    ring-offset-color: transparent !important;
+  }
+
+  /* Ultra-specific targeting based on the exact HTML structure provided */
+  .dark button.inline-flex.items-center.justify-center[title="Learn More"] {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: white !important;
+    text-decoration: underline !important;
+  }
+
+  /* Target any button with Learn More text and similar structure */
+  .dark button.inline-flex.items-center.justify-center.whitespace-nowrap {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Hover states for Learn More buttons */
+  .dark button[title="Learn More"]:hover,
+  .dark button.inline-flex.items-center.justify-center[title="Learn More"]:hover {
+    background: none !important;
+    background-color: transparent !important;
+    color: #CAD2C5 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Force text color for these buttons */
+  .dark button[title="Learn More"] *,
+  .dark button.inline-flex.items-center.justify-center[title="Learn More"] * {
+    color: inherit !important;
+  }
+
   /* More specific targeting for Relume UI Button components with link variant */
   .dark .btn[data-variant="link"],
   .dark button[data-relume-element][data-variant="link"],

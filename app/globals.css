@@ -60,33 +60,120 @@
 }
 
 @layer components {
+  /* =============================================
+     COMPREHENSIVE BUTTON STYLING
+     ============================================= */
+  
+  /* Primary Buttons */
   .btn-primary {
-    @apply bg-bizzie-600 hover:bg-bizzie-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg hover:scale-105;
+    @apply bg-bizzie-600 hover:bg-bizzie-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg;
   }
   
+  /* Secondary Buttons */
   .btn-secondary {
-    @apply bg-bizzie-100 hover:bg-bizzie-200 text-bizzie-800 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-bizzie-300 hover:border-bizzie-400;
+    @apply bg-white hover:bg-bizzie-50 text-bizzie-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-bizzie-300 hover:border-bizzie-400;
   }
 
-  /* Enhanced dark mode button styling */
+  /* Dark mode button styling */
   .dark .btn-primary {
-    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white rounded-lg shadow-soft hover:shadow-soft-lg !important;
+    @apply bg-bizzie-300 hover:bg-bizzie-200 text-bizzie-900 !important;
   }
 
   .dark .btn-secondary {
-    @apply bg-bizzie-700 hover:bg-bizzie-600 text-white border border-bizzie-600 rounded-lg !important;
+    @apply bg-bizzie-700 hover:bg-bizzie-600 text-white border border-bizzie-600 !important;
   }
 
+  /* Link Buttons - Clean Styling */
+  button[variant="link"],
+  .btn-link {
+    @apply text-bizzie-900 underline bg-transparent border-none p-0 font-medium;
+  }
 
+  .dark button[variant="link"],
+  .dark .btn-link {
+    @apply text-white bg-transparent border-none !important;
+  }
+
+  /* =============================================
+     TYPOGRAPHY SYSTEM - PROPER CONTRAST
+     ============================================= */
+  
+  /* Light mode text styling - DARK TEXT FOR CONTRAST */
+  .heading-h1 { @apply text-gray-900 !important; }
+  .heading-h2 { @apply text-gray-900 !important; }
+  .heading-h3 { @apply text-gray-900 !important; }
+  .heading-h4 { @apply text-gray-900 !important; }
+  .heading-h5 { @apply text-gray-900 !important; }
+  .heading-h6 { @apply text-gray-900 !important; }
+  .text-large { @apply text-gray-700 !important; }
+  .text-medium { @apply text-gray-700 !important; }
+  .text-small { @apply text-gray-600 !important; }
+  .text-scheme-text { @apply text-gray-600 !important; }
+
+  /* Default text colors for light mode */
+  h1, h2, h3, h4, h5, h6 { @apply text-gray-900; }
+  p, span, div { @apply text-gray-700; }
+
+  /* Dark mode text styling - WHITE TEXT FOR CONTRAST */
+  .dark .heading-h1 { @apply text-white !important; }
+  .dark .heading-h2 { @apply text-white !important; }
+  .dark .heading-h3 { @apply text-white !important; }
+  .dark .heading-h4 { @apply text-white !important; }
+  .dark .heading-h5 { @apply text-white !important; }
+  .dark .heading-h6 { @apply text-white !important; }
+  .dark .text-large { @apply text-gray-200 !important; }
+  .dark .text-medium { @apply text-gray-200 !important; }
+  .dark .text-small { @apply text-gray-300 !important; }
+  .dark .text-scheme-text { @apply text-gray-300 !important; }
+
+  /* Default dark mode text colors */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 { @apply text-white !important; }
+  .dark p, .dark span, .dark div { @apply text-gray-200 !important; }
+
+  /* =============================================
+     COMPONENT STYLING
+     ============================================= */
 
   .card-enhanced {
     @apply bg-white/90 backdrop-blur-sm border border-bizzie-200 rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 p-6;
+  }
+
+  .dark .card-enhanced {
+    @apply bg-bizzie-800/90 border-bizzie-700 text-white;
   }
 
   .image-enhanced {
     @apply rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:scale-105;
   }
 
+  .navbar-enhanced {
+    @apply bg-white/95 backdrop-blur-md border-b border-bizzie-200 shadow-soft;
+  }
+
+  .dark .navbar-enhanced {
+    @apply bg-bizzie-900/95 border-bizzie-800;
+  }
+
+  .footer-enhanced {
+    @apply bg-bizzie-900 text-bizzie-100;
+  }
+
+  .footer-enhanced,
+  .footer-enhanced * {
+    color: white !important;
+  }
+
+  .footer-enhanced a,
+  .footer-enhanced a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+
+  /* =============================================
+     SECTION BACKGROUNDS
+     ============================================= */
+
+  /* Light mode section backgrounds */
   .section-bg-subtle {
     @apply bg-gradient-to-br from-bizzie-50 via-bizzie-100 to-bizzie-200;
   }
@@ -99,26 +186,19 @@
     @apply bg-gradient-to-br from-bizzie-600 via-bizzie-700 to-bizzie-800;
   }
 
-  .section-bg-dark {
-    @apply bg-gradient-to-br from-bizzie-800 via-bizzie-900 to-black;
+  .section-bg-neutral {
+    @apply bg-white;
   }
 
-  .navbar-enhanced {
-    @apply bg-white/95 backdrop-blur-md border-b border-bizzie-200 shadow-soft;
+  .section-bg-light-accent {
+    @apply bg-gray-50;
   }
 
-  .footer-enhanced {
-    @apply bg-bizzie-900 text-bizzie-100;
+  .section-bg-medium-accent {
+    @apply bg-gray-100;
   }
 
-  .dark .card-enhanced {
-    @apply bg-bizzie-800/90 border-bizzie-700 text-white;
-  }
-
-  .dark .navbar-enhanced {
-    @apply bg-bizzie-900/95 border-bizzie-800;
-  }
-
+  /* Dark mode section backgrounds */
   .dark .section-bg-subtle {
     @apply bg-gradient-to-br from-bizzie-900 via-bizzie-800 to-bizzie-700;
   }
@@ -131,236 +211,87 @@
     @apply bg-gradient-to-br from-bizzie-900 via-black to-bizzie-900;
   }
 
-  /* Improve text contrast in colored sections for dark mode */
-  .dark .section-bg-subtle h1,
-  .dark .section-bg-subtle h2,
-  .dark .section-bg-subtle h3,
-  .dark .section-bg-subtle p,
-  .dark .section-bg-accent h1,
-  .dark .section-bg-accent h2,
-  .dark .section-bg-accent h3,
-  .dark .section-bg-accent p,
-  .dark .section-bg-primary h1,
-  .dark .section-bg-primary h2,
-  .dark .section-bg-primary h3,
-  .dark .section-bg-primary p {
+  .dark .section-bg-neutral {
+    @apply bg-bizzie-800;
+  }
+
+  .dark .section-bg-light-accent {
+    @apply bg-bizzie-800/80;
+  }
+
+  .dark .section-bg-medium-accent {
+    @apply bg-bizzie-700/90;
+  }
+
+  /* SECTION-SPECIFIC TEXT CONTRAST FIXES */
+  
+  /* Light mode - ensure dark text on light section backgrounds */
+  .section-bg-subtle, .section-bg-accent, .section-bg-light-accent, .section-bg-medium-accent, .section-bg-neutral {
+    color: theme('colors.gray.900') !important;
+  }
+  
+  .section-bg-subtle h1, .section-bg-subtle h2, .section-bg-subtle h3, .section-bg-subtle h4, .section-bg-subtle h5, .section-bg-subtle h6,
+  .section-bg-accent h1, .section-bg-accent h2, .section-bg-accent h3, .section-bg-accent h4, .section-bg-accent h5, .section-bg-accent h6,
+  .section-bg-light-accent h1, .section-bg-light-accent h2, .section-bg-light-accent h3, .section-bg-light-accent h4, .section-bg-light-accent h5, .section-bg-light-accent h6,
+  .section-bg-medium-accent h1, .section-bg-medium-accent h2, .section-bg-medium-accent h3, .section-bg-medium-accent h4, .section-bg-medium-accent h5, .section-bg-medium-accent h6,
+  .section-bg-neutral h1, .section-bg-neutral h2, .section-bg-neutral h3, .section-bg-neutral h4, .section-bg-neutral h5, .section-bg-neutral h6 {
+    @apply text-gray-900 !important;
+  }
+  
+  .section-bg-subtle p, .section-bg-subtle span, .section-bg-subtle div,
+  .section-bg-accent p, .section-bg-accent span, .section-bg-accent div,
+  .section-bg-light-accent p, .section-bg-light-accent span, .section-bg-light-accent div,
+  .section-bg-medium-accent p, .section-bg-medium-accent span, .section-bg-medium-accent div,
+  .section-bg-neutral p, .section-bg-neutral span, .section-bg-neutral div {
+    @apply text-gray-700 !important;
+  }
+
+  /* Dark backgrounds get white text in light mode */
+  .section-bg-primary {
+    color: white !important;
+  }
+  
+  .section-bg-primary h1, .section-bg-primary h2, .section-bg-primary h3, .section-bg-primary h4, .section-bg-primary h5, .section-bg-primary h6,
+  .section-bg-primary p, .section-bg-primary span, .section-bg-primary div {
     @apply text-white !important;
   }
 
-  .dark .section-bg-subtle .text-bizzie-600,
-  .dark .section-bg-accent .text-bizzie-600,
-  .dark .section-bg-primary .text-bizzie-600 {
-    @apply text-bizzie-300 !important;
+  /* Dark mode - white text on dark section backgrounds */
+  .dark .section-bg-subtle, .dark .section-bg-accent, .dark .section-bg-primary, 
+  .dark .section-bg-light-accent, .dark .section-bg-medium-accent, .dark .section-bg-neutral {
+    color: white !important;
   }
-
-  /* Improve text contrast in demo image placeholder for dark mode */
-  .dark .bg-bizzie-100 p,
-  .dark .bg-bizzie-100 .text-bizzie-600,
-  .dark .bg-bizzie-100 .text-bizzie-500 {
+  
+  .dark .section-bg-subtle h1, .dark .section-bg-subtle h2, .dark .section-bg-subtle h3, .dark .section-bg-subtle h4, .dark .section-bg-subtle h5, .dark .section-bg-subtle h6,
+  .dark .section-bg-accent h1, .dark .section-bg-accent h2, .dark .section-bg-accent h3, .dark .section-bg-accent h4, .dark .section-bg-accent h5, .dark .section-bg-accent h6,
+  .dark .section-bg-primary h1, .dark .section-bg-primary h2, .dark .section-bg-primary h3, .dark .section-bg-primary h4, .dark .section-bg-primary h5, .dark .section-bg-primary h6,
+  .dark .section-bg-light-accent h1, .dark .section-bg-light-accent h2, .dark .section-bg-light-accent h3, .dark .section-bg-light-accent h4, .dark .section-bg-light-accent h5, .dark .section-bg-light-accent h6,
+  .dark .section-bg-medium-accent h1, .dark .section-bg-medium-accent h2, .dark .section-bg-medium-accent h3, .dark .section-bg-medium-accent h4, .dark .section-bg-medium-accent h5, .dark .section-bg-medium-accent h6,
+  .dark .section-bg-neutral h1, .dark .section-bg-neutral h2, .dark .section-bg-neutral h3, .dark .section-bg-neutral h4, .dark .section-bg-neutral h5, .dark .section-bg-neutral h6 {
     @apply text-white !important;
   }
-
-  /* Fix Learn More link buttons in dark mode - remove all button styling */
-  .dark [data-variant="link"],
-  .dark button[class*="variant-link"],
-  .dark .btn-link {
-    @apply text-white bg-transparent border-none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+  
+  .dark .section-bg-subtle p, .dark .section-bg-subtle span, .dark .section-bg-subtle div,
+  .dark .section-bg-accent p, .dark .section-bg-accent span, .dark .section-bg-accent div,
+  .dark .section-bg-primary p, .dark .section-bg-primary span, .dark .section-bg-primary div,
+  .dark .section-bg-light-accent p, .dark .section-bg-light-accent span, .dark .section-bg-light-accent div,
+  .dark .section-bg-medium-accent p, .dark .section-bg-medium-accent span, .dark .section-bg-medium-accent div,
+  .dark .section-bg-neutral p, .dark .section-bg-neutral span, .dark .section-bg-neutral div {
+    @apply text-gray-200 !important;
   }
 
-  .dark .text-scheme-text {
-    @apply text-white !important;
+  /* Accent colors for both modes */
+  .text-bizzie-accent { @apply text-bizzie-600; }
+  .dark .text-bizzie-accent { @apply text-bizzie-300 !important; }
+
+  /* =============================================
+     PRICING TABLE SPECIFIC STYLING
+     ============================================= */
+
+  .pricing-table {
+    @apply bg-white dark:bg-bizzie-900;
   }
 
-  /* Target only link-style buttons specifically */
-  .dark button[variant="link"],
-  .dark button[data-variant="link"] {
-    background: none !important;
-    background-color: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    color: white !important;
-    text-decoration: underline;
-  }
-
-  /* Target the specific Learn More button structure */
-  .dark button[title*="Learn More"],
-  .dark button:has(svg):contains("Learn More"),
-  .dark .inline-flex.items-center.justify-center[title*="Learn More"] {
-    background: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    ring-offset-color: transparent !important;
-    color: white !important;
-    text-decoration: underline !important;
-  }
-
-  /* Remove ring/focus backgrounds specifically */
-  .dark button.ring-offset-white,
-  .dark button[class*="ring-offset"],
-  .dark button.text-text-primary {
-    background: transparent !important;
-    background-color: transparent !important;
-    ring-offset-color: transparent !important;
-  }
-
-  /* Ultra-specific targeting based on the exact HTML structure provided */
-  .dark button.inline-flex.items-center.justify-center[title="Learn More"] {
-    background: none !important;
-    background-color: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: white !important;
-    text-decoration: underline !important;
-  }
-
-  /* Target any button with Learn More text and similar structure */
-  .dark button.inline-flex.items-center.justify-center.whitespace-nowrap {
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-
-  /* Hover states for Learn More buttons */
-  .dark button[title="Learn More"]:hover,
-  .dark button.inline-flex.items-center.justify-center[title="Learn More"]:hover {
-    background: none !important;
-    background-color: transparent !important;
-    color: #CAD2C5 !important;
-    text-decoration: underline !important;
-  }
-
-  /* Force text color for these buttons */
-  .dark button[title="Learn More"] *,
-  .dark button.inline-flex.items-center.justify-center[title="Learn More"] * {
-    color: inherit !important;
-  }
-
-  /* More specific targeting for Relume UI Button components with link variant */
-  .dark .btn[data-variant="link"],
-  .dark button[data-relume-element][data-variant="link"],
-  .dark [class*="Button"][data-variant="link"],
-  .dark [class*="relume"] button[data-variant="link"] {
-    all: unset !important;
-    color: white !important;
-    text-decoration: underline !important;
-    cursor: pointer !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-  }
-
-  /* Very specific targeting for only variant="link" buttons - remove background only */
-  .dark button[variant="link"][size="link"] {
-    background-color: transparent !important;
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
-
-  .dark a[class*="variant-link"]:hover,
-  .dark .text-link:hover,
-  .dark button[data-variant="link"]:hover,
-  .dark button[class*="variant-link"]:hover,
-  .dark [class*="variant-link"]:hover,
-  .dark [data-variant="link"]:hover,
-  .dark [class*="size-link"]:hover {
-    background: none !important;
-    background-color: transparent !important;
-    color: #CAD2C5 !important;
-    text-decoration: underline;
-  }
-
-  /* Only target link variant buttons, not all buttons */
-  .dark button[variant="link"] {
-    background: transparent !important;
-  }
-
-  /* Fix footer text and links to be white against dark background */
-  .footer-enhanced,
-  .footer-enhanced * {
-    color: white !important;
-  }
-
-  .footer-enhanced a,
-  .footer-enhanced a:hover {
-    color: white !important;
-    text-decoration: none;
-  }
-
-  .footer-enhanced a:hover {
-    opacity: 0.8;
-  }
-
-  /* Enhanced button styling for regular buttons only (not link variants) */
-  button:not([variant="link"]),
-  .btn:not([variant="link"]),
-  [role="button"]:not([variant="link"]) {
-    @apply rounded-lg transition-all duration-200 font-medium;
-  }
-
-  /* Fix secondary buttons and other button variants in dark mode (exclude link variants) */
-  .dark button:not(.btn-primary):not([class*="bg-white"]):not([class*="bg-bizzie"]):not([variant="link"]) {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
-  }
-
-  /* Fix specific button variants in dark mode */
-  .dark .btn-secondary,
-  .dark button[class*="variant-secondary"] {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
-  }
-
-  /* Improve CTA and primary button dark mode styling */
-  .dark .btn-primary {
-    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white rounded-lg !important;
-  }
-
-  /* Fix text links - remove background colors */
-  .dark a:not(.btn):not([class*="bg-"]),
-  .dark .text-link,
-  .dark [data-variant="link"]:not(.btn) {
-    @apply text-white bg-transparent hover:text-bizzie-300 !important;
-  }
-
-  /* Light mode text links */
-  a:not(.btn):not([class*="bg-"]),
-  .text-link,
-  [data-variant="link"]:not(.btn) {
-    @apply text-bizzie-900 bg-transparent hover:text-bizzie-700;
-  }
-
-  /* Fix timeline and roadmap buttons specifically */
-  .dark .timeline button,
-  .dark .roadmap button {
-    @apply bg-bizzie-700 hover:bg-bizzie-600 text-white border-bizzie-600 !important;
-  }
-
-  /* Improve pricing table dark mode theming */
-  .dark .border-scheme-border {
-    @apply border-bizzie-700 !important;
-  }
-
-  .dark .bg-scheme-background {
-    @apply bg-bizzie-800 !important;
-  }
-
-  /* Fix all table text in dark mode */
-  .dark table,
-  .dark .grid p,
-  .dark .grid div {
-    @apply text-white;
-  }
-
-  /* Enhanced pricing table dark mode styling */
   .dark .pricing-table {
     @apply bg-bizzie-900;
   }
@@ -377,17 +308,14 @@
     @apply text-white;
   }
 
-  /* Fix pricing table header backgrounds */
   .dark .pricing-table > div:first-child {
     @apply bg-bizzie-800 border-bizzie-700;
   }
 
-  /* Improve feature category headers in dark mode */
   .dark .feature-category-header {
     @apply bg-bizzie-700 text-white;
   }
 
-  /* Fix pricing table cell content in dark mode */
   .dark .pricing-table .grid div {
     @apply text-white border-bizzie-700 bg-bizzie-800;
   }
@@ -396,7 +324,6 @@
     @apply text-white;
   }
 
-  /* Fix checkmarks and table cell borders in dark mode */
   .dark .pricing-table svg {
     @apply text-bizzie-300;
   }
@@ -405,46 +332,106 @@
     @apply border-bizzie-700;
   }
 
-  /* Ensure all pricing table rows have proper backgrounds */
   .dark .pricing-table .grid:not(:first-child) {
     @apply bg-bizzie-800;
   }
 
-  /* Fix any white backgrounds in dark mode by targeting specific components */
-  .dark .pricing-table [class*="bg-white"] {
+  .dark .pricing-table button {
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
+  }
+
+  /* =============================================
+     UTILITY ANIMATIONS
+     ============================================= */
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* =============================================
+     SHADOW SYSTEM
+     ============================================= */
+
+  .shadow-soft {
+    box-shadow: 0 2px 15px -3px rgba(82, 121, 111, 0.1), 0 10px 20px -2px rgba(82, 121, 111, 0.04);
+  }
+
+  .shadow-soft-lg {
+    box-shadow: 0 10px 25px -5px rgba(82, 121, 111, 0.1), 0 20px 40px -5px rgba(82, 121, 111, 0.04);
+  }
+
+  .shadow-soft-xl {
+    box-shadow: 0 20px 35px -10px rgba(82, 121, 111, 0.15), 0 35px 60px -12px rgba(82, 121, 111, 0.1);
+  }
+
+  /* =============================================
+     BORDER SYSTEM
+     ============================================= */
+
+  .border-scheme-border {
+    @apply border-bizzie-200;
+  }
+
+  .dark .border-scheme-border {
+    @apply border-bizzie-700;
+  }
+
+  .bg-scheme-background {
+    @apply bg-white;
+  }
+
+  .dark .bg-scheme-background {
+    @apply bg-bizzie-800;
+  }
+
+  /* =============================================
+     CLEAN OVERRIDES FOR SPECIAL CASES
+     ============================================= */
+
+  /* Special handling for white backgrounds in dark mode */
+  .dark .bg-white:not(.btn):not(button) {
     background-color: #354F52 !important;
   }
 
-  .dark [class*="bg-white"]:not(.btn):not(button) {
-    background-color: #354F52 !important;
+  /* Demo page image placeholder fix */
+  .dark .bg-bizzie-100 p,
+  .dark .bg-bizzie-100 .text-bizzie-600,
+  .dark .bg-bizzie-100 .text-bizzie-500 {
+    @apply text-white !important;
   }
 
-  /* Enhanced button styling improvements */
-  .btn-primary {
-    @apply rounded-lg px-5 py-2.5 font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg text-sm;
-    @apply bg-bizzie-600 text-white hover:bg-bizzie-700 active:bg-bizzie-800;
+  /* Table text fixes */
+  .dark table,
+  .dark .grid p,
+  .dark .grid div {
+    @apply text-white;
   }
 
-  .btn-secondary {
-    @apply rounded-lg px-5 py-2.5 font-medium transition-all duration-200 border text-sm;
-    @apply bg-white text-bizzie-700 border-bizzie-300 hover:bg-bizzie-50 hover:border-bizzie-400 active:bg-bizzie-100;
-  }
-
-  /* General button improvements for both modes */
-  button:not([variant="link"]) {
-    @apply font-medium transition-all duration-200;
-  }
-
-  /* Dark mode button styling */
-  .dark .btn-primary {
-    @apply bg-bizzie-600 text-white hover:bg-bizzie-500 active:bg-bizzie-700 !important;
-  }
-
-  .dark .btn-secondary {
-    @apply bg-bizzie-800 text-white border-bizzie-600 hover:bg-bizzie-700 hover:border-bizzie-500 active:bg-bizzie-900 !important;
-  }
-
-  /* SIMPLE FIX: Make link buttons look like plain text in dark mode */
+  /* Complex button targeting for link variants */
   .dark button.inline-flex.items-center.justify-center.border-0.text-text-primary {
     background: none !important;
     background-color: transparent !important;
@@ -465,44 +452,5 @@
 
   .dark button.inline-flex.items-center.justify-center.border-0.text-text-primary svg {
     color: inherit !important;
-  }
-
-  /* Fix Get started buttons in pricing table - dark background with white text */
-  .dark .pricing-table button {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 rounded-lg !important;
-  }
-
-  /* Alternating section backgrounds for visual variety */
-  .section-bg-neutral {
-    @apply bg-gray-50;
-  }
-
-  .section-bg-light-accent {
-    @apply bg-bizzie-100/50;
-  }
-
-  .section-bg-medium-accent {
-    @apply bg-bizzie-200/70;
-  }
-
-  /* Dark mode alternating backgrounds */
-  .dark .section-bg-neutral {
-    @apply bg-bizzie-800;
-  }
-
-  .dark .section-bg-light-accent {
-    @apply bg-bizzie-800/80;
-  }
-
-  .dark .section-bg-medium-accent {
-    @apply bg-bizzie-700;
-  }
-
-  .dark .section-bg-subtle {
-    @apply bg-gradient-to-br from-bizzie-900 via-bizzie-800 to-bizzie-700;
-  }
-
-  .dark .section-bg-accent {
-    @apply bg-gradient-to-br from-bizzie-800 via-bizzie-700 to-bizzie-600;
   }
 }

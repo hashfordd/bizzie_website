@@ -11,12 +11,12 @@ export function Hero() {
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-x-12 gap-y-5 md:mb-18 md:grid-cols-2 md:gap-y-8 lg:mb-20 lg:gap-x-20 lg:gap-y-16">
           <div className="animate-slide-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bizzie-900 mb-6 leading-tight">
-              Transform Your Business with <span className="text-bizzie-600">Bizzie</span> Today
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Transform Your Business with <span className="text-bizzie-accent">Bizzie</span> Today
             </h1>
           </div>
           <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-lg text-bizzie-700 mb-8 leading-relaxed">
+            <p className="text-lg mb-8 leading-relaxed">
               Take control of your financial health with Bizzie, the ultimate
               profit coach for home-service businesses. Streamline your
               operations and maximize your profits effortlessly.

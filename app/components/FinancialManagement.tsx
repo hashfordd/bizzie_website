@@ -10,11 +10,11 @@ export function FinancialManagement() {
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4">Simplify</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">
+            <p className="mb-3 font-semibold md:mb-4 text-small">Simplify</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6">
               Your Financial Management Made Effortless
             </h1>
-            <p className="text-medium">
+            <p className="text-lg">
               Bizzie's unified expense dashboard transforms your bookkeeping
               experience. Gain real-time visibility into your costs and uncover
               actionable insights to boost your profitability.

@@ -9,11 +9,11 @@ export function PricingHero() {
       <div className="relative z-10 container">
         <div className="w-full max-w-lg">
           <p className="mb-3 font-semibold text-white md:mb-4">Flexible</p>
-          <h1 className="heading-h1 mb-5 font-bold text-white md:mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mb-5 font-bold text-white md:mb-6">
             Affordable Pricing Plans
           </h1>
-          <p className="text-medium text-white">
-            Discover how Bizzie’s pricing options empower your business to
+          <p className="text-lg text-white">
+            Discover how Bizzie's pricing options empower your business to
             thrive with confidence and clarity.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 md:mt-8">

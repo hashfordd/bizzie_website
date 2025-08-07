@@ -10,13 +10,13 @@ export function Features() {
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 lg:mb-20 lg:gap-x-20">
           <div>
-            <h2 className="heading-h3 font-bold">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
               Transform Your Business with Powerful Financial Management
               Features
             </h2>
           </div>
           <div>
-            <p className="text-medium">
+            <p className="text-lg">
               Bizzie helps you keep track of your equipment inventories
               effortlessly. With our intuitive interface, you can manage your
               tools and resources efficiently. Say goodbye to lost equipment and
@@ -29,7 +29,7 @@ export function Features() {
             <div className="mb-5 md:mb-6">
               <RelumeIcon className="size-12 text-scheme-text" />
             </div>
-            <h3 className="heading-h5 mb-3 font-bold md:mb-4">
+            <h3 className="text-xl font-bold mb-3 md:mb-4">
               Easily Manage Your Recurring Bills and Wage Expenses
             </h3>
             <p>
@@ -50,7 +50,7 @@ export function Features() {
             <div className="mb-5 md:mb-6">
               <RelumeIcon className="size-12 text-scheme-text" />
             </div>
-            <h3 className="heading-h5 mb-3 font-bold md:mb-4">
+            <h3 className="text-xl font-bold mb-3 md:mb-4">
               Visualize Your Operational Outlays in Real-Time for Better
               Decision Making
             </h3>
@@ -72,7 +72,7 @@ export function Features() {
             <div className="mb-5 md:mb-6">
               <RelumeIcon className="size-12 text-scheme-text" />
             </div>
-            <h3 className="heading-h5 mb-3 font-bold md:mb-4">
+            <h3 className="text-xl font-bold mb-3 md:mb-4">
               Optimize Your Pricing Strategies with Data-Driven Insights
             </h3>
             <p>

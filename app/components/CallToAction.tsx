@@ -11,10 +11,10 @@ export function CallToAction() {
       <div className="container">
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
           <div className="animate-slide-up">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6 text-bizzie-900 leading-tight">
-              Unlock Your Business <span className="text-bizzie-600">Potential</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6 leading-tight">
+              Unlock Your Business <span className="text-bizzie-accent">Potential</span>
             </h2>
-            <p className="text-lg text-bizzie-700 leading-relaxed">
+            <p className="text-lg leading-relaxed">
               Experience the power of Bizzie—your partner in achieving financial
               clarity and business growth.
             </p>

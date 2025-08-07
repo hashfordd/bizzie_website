@@ -42,7 +42,7 @@ const useCarousel = () => {
 export function PricingTestimonials() {
   const carouselState = useCarousel();
   return (
-    <section className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28 section-bg-neutral">
       <div className="container">
         <Carousel
           setApi={carouselState.setApi}

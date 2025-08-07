@@ -6,7 +6,7 @@ import { Check, RelumeIcon } from "relume-icons";
 
 export function PricingFeatures() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-light-accent">
       <div className="container">
         <div className="mb-8 w-full max-w-lg lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Affordable</p>

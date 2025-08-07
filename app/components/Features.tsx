@@ -6,7 +6,7 @@ import { ChevronRight, RelumeIcon } from "relume-icons";
 
 export function Features() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-light-accent">
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 lg:mb-20 lg:gap-x-20">
           <div>

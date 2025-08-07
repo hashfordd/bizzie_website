@@ -169,16 +169,19 @@
   }
 
   /* Fix secondary buttons and other button variants in dark mode */
-  .dark button,
-  .dark [role="button"],
-  .dark .btn-secondary button,
-  .dark button[class*="variant-secondary"] {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border-bizzie-600 !important;
+  .dark button:not(.btn-primary):not([class*="bg-white"]):not([class*="bg-bizzie"]) {
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 !important;
   }
 
-  /* Ensure button text is always visible in dark mode */
-  .dark button:not(.btn-primary):not([class*="bg-white"]) {
-    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 !important;
+  /* Fix specific button variants in dark mode */
+  .dark .btn-secondary,
+  .dark button[class*="variant-secondary"] {
+    @apply text-white bg-bizzie-700 hover:bg-bizzie-600 border border-bizzie-600 !important;
+  }
+
+  /* Improve CTA and primary button dark mode styling */
+  .dark .btn-primary {
+    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white !important;
   }
 
   /* Fix timeline and roadmap buttons specifically */
@@ -237,5 +240,39 @@
 
   .dark .pricing-table .border-l {
     @apply border-bizzie-700;
+  }
+
+  /* Alternating section backgrounds for visual variety */
+  .section-bg-neutral {
+    @apply bg-gray-50;
+  }
+
+  .section-bg-light-accent {
+    @apply bg-bizzie-100/50;
+  }
+
+  .section-bg-medium-accent {
+    @apply bg-bizzie-200/70;
+  }
+
+  /* Dark mode alternating backgrounds */
+  .dark .section-bg-neutral {
+    @apply bg-bizzie-800;
+  }
+
+  .dark .section-bg-light-accent {
+    @apply bg-bizzie-800/80;
+  }
+
+  .dark .section-bg-medium-accent {
+    @apply bg-bizzie-700;
+  }
+
+  .dark .section-bg-subtle {
+    @apply bg-gradient-to-br from-bizzie-900 via-bizzie-800 to-bizzie-700;
+  }
+
+  .dark .section-bg-accent {
+    @apply bg-gradient-to-br from-bizzie-800 via-bizzie-700 to-bizzie-600;
   }
 }

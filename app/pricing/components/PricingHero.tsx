@@ -5,7 +5,7 @@ import React from "react";
 
 export function PricingHero() {
   return (
-    <section className="relative px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="relative px-[5%] py-16 md:py-24 lg:py-28 section-bg-primary">
       <div className="relative z-10 container">
         <div className="w-full max-w-lg">
           <p className="mb-3 font-semibold text-white md:mb-4">Flexible</p>

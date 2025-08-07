@@ -31,7 +31,7 @@ const Circle = () => {
 
 export function Timeline() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-light-accent">
       <div className="container">
         <div className="relative grid auto-cols-fr grid-cols-1 items-start justify-center gap-6 sm:gap-12 md:grid-cols-2 md:gap-24 lg:gap-32">
           <div className="relative top-0 z-10 md:sticky md:top-20 md:z-auto md:pr-4">

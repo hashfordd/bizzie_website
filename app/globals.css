@@ -428,6 +428,29 @@
     @apply rounded-lg px-6 py-3 font-medium transition-all duration-200 border;
   }
 
+  /* SIMPLE FIX: Make link buttons look like plain text in dark mode */
+  .dark button.inline-flex.items-center.justify-center.border-0.text-text-primary {
+    background: none !important;
+    background-color: transparent !important;
+    color: white !important;
+    text-decoration: underline !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .dark button.inline-flex.items-center.justify-center.border-0.text-text-primary:hover {
+    background: none !important;
+    background-color: transparent !important;
+    color: #CAD2C5 !important;
+    text-decoration: underline !important;
+  }
+
+  .dark button.inline-flex.items-center.justify-center.border-0.text-text-primary svg {
+    color: inherit !important;
+  }
+
   /* Fix Get started buttons in pricing table */
   .dark .pricing-table button {
     @apply text-bizzie-900 bg-white hover:bg-gray-100 border border-white rounded-lg !important;

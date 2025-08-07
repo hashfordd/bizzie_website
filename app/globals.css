@@ -421,11 +421,27 @@
 
   /* Enhanced button styling improvements */
   .btn-primary {
-    @apply rounded-lg px-6 py-3 font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg;
+    @apply rounded-lg px-5 py-2.5 font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg text-sm;
+    @apply bg-bizzie-600 text-white hover:bg-bizzie-700 active:bg-bizzie-800;
   }
 
   .btn-secondary {
-    @apply rounded-lg px-6 py-3 font-medium transition-all duration-200 border;
+    @apply rounded-lg px-5 py-2.5 font-medium transition-all duration-200 border text-sm;
+    @apply bg-white text-bizzie-700 border-bizzie-300 hover:bg-bizzie-50 hover:border-bizzie-400 active:bg-bizzie-100;
+  }
+
+  /* General button improvements for both modes */
+  button:not([variant="link"]) {
+    @apply font-medium transition-all duration-200;
+  }
+
+  /* Dark mode button styling */
+  .dark .btn-primary {
+    @apply bg-bizzie-600 text-white hover:bg-bizzie-500 active:bg-bizzie-700 !important;
+  }
+
+  .dark .btn-secondary {
+    @apply bg-bizzie-800 text-white border-bizzie-600 hover:bg-bizzie-700 hover:border-bizzie-500 active:bg-bizzie-900 !important;
   }
 
   /* SIMPLE FIX: Make link buttons look like plain text in dark mode */

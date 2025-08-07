@@ -45,7 +45,7 @@ export function Navbar() {
   const useActive = useRelume();
   return (
     <section className="fixed top-0 left-0 right-0 z-[999] flex w-full items-center navbar-enhanced lg:min-h-18 lg:px-[5%]">
-      <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
+      <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-start lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/" className="flex items-center">
             <img
@@ -143,7 +143,7 @@ export function Navbar() {
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
           >
             <button
-              className="text-regular flex w-full items-center justify-center gap-4 py-3 text-center lg:w-auto lg:flex-none lg:justify-start lg:gap-2 lg:px-4 lg:py-2"
+              className="text-regular flex w-full items-center justify-start gap-4 py-3 text-left lg:w-auto lg:flex-none lg:justify-start lg:gap-2 lg:px-4 lg:py-2"
               onClick={useActive.openOnMobileDropdownMenu}
             >
               <span>Resources</span>

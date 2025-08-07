@@ -521,3 +521,464 @@
 .dark .navbar-enhanced svg {
   @apply text-white !important;
 }
+
+/* =============================================
+   COMPREHENSIVE FORM STYLING
+   ============================================= */
+
+/* Form Inputs - All Types */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  @apply w-full px-3 py-2 border border-bizzie-300 rounded-lg focus:ring-2 focus:ring-bizzie-500 focus:border-transparent transition-all bg-white text-gray-900 placeholder-gray-500;
+}
+
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="tel"],
+.dark input[type="password"],
+.dark input[type="search"],
+.dark textarea,
+.dark select {
+  @apply border-bizzie-600 bg-bizzie-700 text-white placeholder-gray-400 focus:ring-bizzie-400;
+}
+
+/* Form Labels */
+label {
+  @apply block text-sm font-medium mb-1 text-gray-900;
+}
+
+.dark label {
+  @apply text-white;
+}
+
+/* Form Groups */
+.form-group {
+  @apply mb-4;
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  @apply w-4 h-4 text-bizzie-600 border-gray-300 rounded focus:ring-bizzie-500;
+}
+
+.dark input[type="checkbox"],
+.dark input[type="radio"] {
+  @apply border-bizzie-600 bg-bizzie-700 focus:ring-bizzie-400;
+}
+
+/* =============================================
+   COMPREHENSIVE LINK STYLING
+   ============================================= */
+
+/* Base Links */
+a {
+  @apply text-bizzie-600 hover:text-bizzie-700 transition-colors;
+}
+
+.dark a {
+  @apply text-bizzie-300 hover:text-bizzie-200;
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply text-gray-900 hover:text-bizzie-600 font-medium transition-colors;
+}
+
+.dark .nav-link {
+  @apply text-white hover:text-bizzie-300;
+}
+
+/* Footer Links */
+.footer-link {
+  @apply text-white hover:text-bizzie-200 transition-colors;
+}
+
+/* Underlined Links */
+.link-underline {
+  @apply underline underline-offset-2 decoration-2 decoration-bizzie-400 hover:decoration-bizzie-600;
+}
+
+.dark .link-underline {
+  @apply decoration-bizzie-300 hover:decoration-bizzie-200;
+}
+
+/* =============================================
+   COMPREHENSIVE LIST STYLING
+   ============================================= */
+
+/* Unordered Lists */
+ul {
+  @apply list-disc list-inside space-y-2;
+}
+
+/* Ordered Lists */
+ol {
+  @apply list-decimal list-inside space-y-2;
+}
+
+/* List Items */
+li {
+  @apply text-gray-700;
+}
+
+.dark li {
+  @apply text-gray-200;
+}
+
+/* Navigation Lists */
+.nav-list {
+  @apply list-none space-y-2;
+}
+
+/* Feature Lists */
+.feature-list {
+  @apply list-none space-y-3;
+}
+
+.feature-list li {
+  @apply flex items-start gap-3;
+}
+
+/* =============================================
+   COMPREHENSIVE ICON STYLING
+   ============================================= */
+
+/* Base Icon Styling */
+svg {
+  @apply flex-shrink-0;
+}
+
+/* Icon Sizes */
+.icon-xs { @apply w-3 h-3; }
+.icon-sm { @apply w-4 h-4; }
+.icon-md { @apply w-5 h-5; }
+.icon-lg { @apply w-6 h-6; }
+.icon-xl { @apply w-8 h-8; }
+.icon-2xl { @apply w-10 h-10; }
+
+/* Icon Colors */
+.icon-primary { @apply text-bizzie-600; }
+.icon-secondary { @apply text-gray-600; }
+.icon-muted { @apply text-gray-400; }
+
+.dark .icon-primary { @apply text-bizzie-300; }
+.dark .icon-secondary { @apply text-gray-300; }
+.dark .icon-muted { @apply text-gray-500; }
+
+/* =============================================
+   COMPREHENSIVE IMAGE STYLING
+   ============================================= */
+
+/* Base Image Styling */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Image Variants */
+.img-rounded { @apply rounded-lg; }
+.img-circle { @apply rounded-full; }
+.img-shadow { @apply shadow-soft; }
+.img-enhanced { @apply rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300; }
+
+/* Placeholder Images */
+.img-placeholder {
+  @apply bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center;
+}
+
+/* =============================================
+   COMPREHENSIVE TABLE STYLING
+   ============================================= */
+
+/* Base Table Styling */
+table {
+  @apply w-full border-collapse;
+}
+
+th {
+  @apply px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200;
+}
+
+td {
+  @apply px-4 py-3 text-gray-700 border-b border-gray-100;
+}
+
+.dark th {
+  @apply text-white border-gray-700;
+}
+
+.dark td {
+  @apply text-gray-200 border-gray-700;
+}
+
+/* Table Variants */
+.table-striped tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+.dark .table-striped tbody tr:nth-child(even) {
+  @apply bg-bizzie-800/30;
+}
+
+/* =============================================
+   COMPREHENSIVE BADGE/TAG STYLING
+   ============================================= */
+
+/* Base Badge Styling */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Badge Variants */
+.badge-primary {
+  @apply bg-bizzie-100 text-bizzie-800 border border-bizzie-200;
+}
+
+.badge-secondary {
+  @apply bg-gray-100 text-gray-800 border border-gray-200;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800 border border-green-200;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 border border-yellow-200;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-800 border border-red-200;
+}
+
+/* Dark Mode Badge Variants */
+.dark .badge-primary {
+  @apply bg-bizzie-700 text-bizzie-200 border-bizzie-600;
+}
+
+.dark .badge-secondary {
+  @apply bg-gray-700 text-gray-200 border-gray-600;
+}
+
+.dark .badge-success {
+  @apply bg-green-700 text-green-200 border-green-600;
+}
+
+.dark .badge-warning {
+  @apply bg-yellow-700 text-yellow-200 border-yellow-600;
+}
+
+.dark .badge-error {
+  @apply bg-red-700 text-red-200 border-red-600;
+}
+
+/* =============================================
+   COMPREHENSIVE MODAL/DIALOG STYLING
+   ============================================= */
+
+/* Modal Backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-[99999];
+}
+
+/* Modal Container */
+.modal-container {
+  @apply fixed inset-0 z-[99999] flex items-center justify-center p-4;
+}
+
+/* Modal Content */
+.modal-content {
+  @apply relative bg-white dark:bg-bizzie-800 rounded-xl shadow-soft-xl border border-bizzie-200 dark:border-bizzie-700 w-full max-w-md max-h-[90vh] overflow-y-auto;
+}
+
+/* Modal Header */
+.modal-header {
+  @apply flex items-center justify-between p-6 border-b border-bizzie-200 dark:border-bizzie-700;
+}
+
+/* Modal Body */
+.modal-body {
+  @apply p-6;
+}
+
+/* Modal Footer */
+.modal-footer {
+  @apply flex justify-end gap-3 p-6 border-t border-bizzie-200 dark:border-bizzie-700;
+}
+
+/* =============================================
+   COMPREHENSIVE SPACING UTILITIES
+   ============================================= */
+
+/* Section Spacing */
+.section-padding {
+  @apply px-[5%] py-16 md:py-24 lg:py-28;
+}
+
+.section-padding-sm {
+  @apply px-[5%] py-8 md:py-12 lg:py-16;
+}
+
+.section-padding-lg {
+  @apply px-[5%] py-24 md:py-32 lg:py-40;
+}
+
+/* Container Spacing */
+.container-spacing {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-spacing {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-spacing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* =============================================
+   COMPREHENSIVE GRID UTILITIES
+   ============================================= */
+
+/* Grid Layouts */
+.grid-1 { @apply grid grid-cols-1 gap-6; }
+.grid-2 { @apply grid grid-cols-1 md:grid-cols-2 gap-6; }
+.grid-3 { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6; }
+.grid-4 { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6; }
+
+/* Responsive Grid Gaps */
+.gap-responsive { @apply gap-4 md:gap-6 lg:gap-8; }
+
+/* =============================================
+   COMPREHENSIVE TEXT UTILITIES
+   ============================================= */
+
+/* Text Weights (sizes already available in Tailwind) */
+.text-light { @apply font-light; }
+.text-normal { @apply font-normal; }
+.text-medium { @apply font-medium; }
+.text-semibold { @apply font-semibold; }
+.text-bold { @apply font-bold; }
+
+/* Text Colors for Different Contexts */
+.text-primary { @apply text-bizzie-600 dark:text-bizzie-300; }
+.text-secondary { @apply text-gray-600 dark:text-gray-400; }
+.text-muted { @apply text-gray-500 dark:text-gray-500; }
+.text-accent { @apply text-bizzie-700 dark:text-bizzie-200; }
+
+/* =============================================
+   COMPREHENSIVE HOVER EFFECTS
+   ============================================= */
+
+/* Hover Transforms */
+.hover-scale { @apply hover:scale-105 transition-transform duration-200; }
+.hover-lift { @apply hover:-translate-y-1 transition-transform duration-200; }
+.hover-rotate { @apply hover:rotate-2 transition-transform duration-200; }
+
+/* Hover Shadows */
+.hover-shadow { @apply hover:shadow-soft-lg transition-shadow duration-200; }
+.hover-shadow-xl { @apply hover:shadow-soft-xl transition-shadow duration-300; }
+
+/* =============================================
+   COMPREHENSIVE FOCUS STATES
+   ============================================= */
+
+/* Focus Rings */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-bizzie-500 focus:ring-offset-2 transition-all;
+}
+
+.dark .focus-ring {
+  @apply focus:ring-bizzie-400 focus:ring-offset-bizzie-900;
+}
+
+/* Focus Within */
+.focus-within-ring {
+  @apply focus-within:ring-2 focus-within:ring-bizzie-500 focus-within:ring-offset-2;
+}
+
+/* =============================================
+   UNIVERSAL ELEMENT STYLING ENFORCEMENT
+   ============================================= */
+
+/* Ensure all buttons use consistent styling */
+button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not([class*="btn-"]) {
+  @apply bg-bizzie-600 hover:bg-bizzie-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.dark button:not(.btn-primary):not(.btn-secondary):not(.btn-link):not([class*="btn-"]) {
+  @apply bg-bizzie-300 hover:bg-bizzie-200 text-bizzie-900;
+}
+
+/* Ensure all cards have consistent styling */
+.card:not(.card-enhanced) {
+  @apply bg-white dark:bg-bizzie-800 rounded-lg shadow-soft border border-bizzie-200 dark:border-bizzie-700 p-6;
+}
+
+/* Ensure all sections have proper text contrast */
+section:not([class*="section-bg-"]) {
+  @apply text-gray-900 dark:text-white;
+}
+
+/* Timeline specific styling */
+.timeline-tag {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200 border border-bizzie-200 dark:border-bizzie-600;
+}
+
+/* Cookie settings toggle styling */
+.toggle-switch {
+  @apply relative inline-flex w-11 h-6 bg-gray-200 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-bizzie-500 focus:ring-offset-2;
+}
+
+.dark .toggle-switch {
+  @apply bg-gray-700 focus:ring-bizzie-400 focus:ring-offset-bizzie-900;
+}
+
+.toggle-switch.checked {
+  @apply bg-bizzie-600;
+}
+
+.dark .toggle-switch.checked {
+  @apply bg-bizzie-500;
+}
+
+/* Loading states */
+.loading {
+  @apply animate-spin;
+}
+
+.skeleton {
+  @apply bg-gray-200 dark:bg-gray-700 animate-pulse rounded;
+}
+
+/* Error states */
+.error-text {
+  @apply text-red-600 dark:text-red-400;
+}
+
+.error-border {
+  @apply border-red-300 dark:border-red-600;
+}
+
+/* Success states */
+.success-text {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.success-border {
+  @apply border-green-300 dark:border-green-600;
+}

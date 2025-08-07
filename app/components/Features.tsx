@@ -3,6 +3,7 @@
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { ChevronRight, RelumeIcon } from "relume-icons";
+import Link from "next/link";
 
 export function Features() {
   return (
@@ -37,12 +38,10 @@ export function Features() {
               expenses.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight />}
-                variant="link"
-                size="link"
-              >
-                Learn More
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>
@@ -59,12 +58,10 @@ export function Features() {
               glance.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight />}
-                variant="link"
-                size="link"
-              >
-                Learn More
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>
@@ -80,12 +77,10 @@ export function Features() {
               profits.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button
-                iconRight={<ChevronRight />}
-                variant="link"
-                size="link"
-              >
-                Learn More
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>

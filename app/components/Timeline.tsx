@@ -70,7 +70,12 @@ export function Timeline() {
             <div className="relative">
               <Circle />
               <div className="mt-4 ml-12 flex flex-col md:ml-0">
-                <h2 className="heading-h3 mb-3 font-bold md:mb-4">Day 1</h2>
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <h2 className="heading-h3 font-bold">Day 1:</h2>
+                  <span className="timeline-tag">
+                    Track
+                  </span>
+                </div>
                 <h3 className="heading-h5 mb-3 font-bold md:mb-4">
                   Start Tracking Expenses
                 </h3>
@@ -79,17 +84,17 @@ export function Timeline() {
                   Bizzie. This initial step sets the foundation for better
                   financial management.
                 </p>
-                <div className="mt-6">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
-                    Track
-                  </span>
-                </div>
               </div>
             </div>
             <div className="relative">
               <Circle />
               <div className="mt-4 ml-12 flex flex-col md:ml-0">
-                <h2 className="heading-h3 mb-3 font-bold md:mb-4">Week 2</h2>
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <h2 className="heading-h3 font-bold">Week 2:</h2>
+                  <span className="timeline-tag">
+                    Refine
+                  </span>
+                </div>
                 <h3 className="heading-h5 mb-3 font-bold md:mb-4">
                   Refine Service Pricing
                 </h3>
@@ -98,17 +103,17 @@ export function Timeline() {
                   service pricing. Adjustments are made based on real-time data
                   and insights.
                 </p>
-                <div className="mt-6">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
-                    Refine
-                  </span>
-                </div>
               </div>
             </div>
             <div className="relative">
               <Circle />
               <div className="mt-4 ml-12 flex flex-col md:ml-0">
-                <h2 className="heading-h3 mb-3 font-bold md:mb-4">Month 1</h2>
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <h2 className="heading-h3 font-bold">Month 1:</h2>
+                  <span className="timeline-tag">
+                    Analyse
+                  </span>
+                </div>
                 <h3 className="heading-h5 mb-3 font-bold md:mb-4">
                   Analyze Profitability
                 </h3>
@@ -117,17 +122,17 @@ export function Timeline() {
                   profitability reports. This analysis reveals trends and areas
                   for improvement.
                 </p>
-                <div className="mt-6">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
-                    Analyse
-                  </span>
-                </div>
               </div>
             </div>
             <div className="relative">
               <Circle />
               <div className="mt-4 ml-12 flex flex-col md:ml-0">
-                <h2 className="heading-h3 mb-3 font-bold md:mb-4">Quarter 1</h2>
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <h2 className="heading-h3 font-bold">Quarter 1:</h2>
+                  <span className="timeline-tag">
+                    Optimise
+                  </span>
+                </div>
                 <h3 className="heading-h5 mb-3 font-bold md:mb-4">
                   Optimize Operations
                 </h3>
@@ -136,11 +141,6 @@ export function Timeline() {
                   streamlined operations. Continuous adjustments lead to
                   increased efficiency and profitability.
                 </p>
-                <div className="mt-6">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
-                    Optimise
-                  </span>
-                </div>
               </div>
             </div>
           </div>

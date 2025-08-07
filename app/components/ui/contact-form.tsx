@@ -91,20 +91,23 @@ export function ContactForm({
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
-            onClick={() => setIsOpen(false)}
-            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
-          >
+          <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, margin: 0 }}>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+            
+            {/* Modal */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-bizzie-800 rounded-xl p-8 shadow-2xl border border-bizzie-200 dark:border-bizzie-700 w-full max-w-md max-h-[90vh] overflow-y-auto relative"
+              className="relative bg-white dark:bg-bizzie-800 rounded-xl p-8 shadow-2xl border border-bizzie-200 dark:border-bizzie-700 w-full max-w-md max-h-[90vh] overflow-y-auto z-10"
             >
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold">{title}</h2>
@@ -241,7 +244,7 @@ export function ContactForm({
                 </form>
               )}
             </motion.div>
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </>

@@ -179,7 +179,9 @@
   .dark .text-link,
   .dark button[data-variant="link"],
   .dark button[class*="variant-link"],
-  .dark [class*="variant-link"] {
+  .dark [class*="variant-link"],
+  .dark [data-variant="link"],
+  .dark [class*="size-link"] {
     background: none !important;
     background-color: transparent !important;
     border: none !important;
@@ -195,7 +197,9 @@
   .dark .text-link:hover,
   .dark button[data-variant="link"]:hover,
   .dark button[class*="variant-link"]:hover,
-  .dark [class*="variant-link"]:hover {
+  .dark [class*="variant-link"]:hover,
+  .dark [data-variant="link"]:hover,
+  .dark [class*="size-link"]:hover {
     background: none !important;
     background-color: transparent !important;
     color: #CAD2C5 !important;

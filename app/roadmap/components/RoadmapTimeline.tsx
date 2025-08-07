@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import React from "react";
+import React, { useState } from "react";
 import { ChevronRight } from "relume-icons";
 import Link from "next/link";
 
@@ -17,6 +17,8 @@ interface TimelineItem {
 }
 
 export function RoadmapTimeline() {
+  const [selectedItem, setSelectedItem] = useState(0);
+  
   const timelineItems: TimelineItem[] = [
     {
       id: "q4-2024",
@@ -153,91 +155,136 @@ export function RoadmapTimeline() {
           <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-bizzie-900 dark:text-white mb-4">
             Our Product Roadmap
           </h2>
-          <p className="text-center text-lg text-bizzie-700 dark:text-bizzie-200 max-w-2xl mx-auto">
+          <p className="text-center text-lg text-bizzie-700 dark:text-bizzie-200 max-w-2xl mx-auto mb-12">
             Follow our journey as we build the future of financial management for home-service businesses.
           </p>
         </div>
 
-        {/* Timeline Items */}
-        <div className="space-y-8 md:space-y-12">
-          {timelineItems.map((item, index) => (
-            <div key={item.id} className="relative">
-              {/* Timeline line */}
-              {index < timelineItems.length - 1 && (
-                <div className="absolute left-6 top-16 w-0.5 h-full bg-bizzie-200 dark:bg-bizzie-600"></div>
-              )}
-              
-              {/* Timeline item */}
-              <div className="flex gap-6">
-                {/* Status icon */}
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${getStatusColor(item.status)} z-10`}>
-                  {getStatusIcon(item.status)}
+        {/* Horizontal Timeline */}
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-bizzie-200 dark:bg-bizzie-600"></div>
+          
+          {/* Timeline dots */}
+          <div className="flex justify-between items-start mb-8">
+            {timelineItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => setSelectedItem(index)}
+                className={`relative flex flex-col items-center cursor-pointer group transition-all duration-200 ${
+                  selectedItem === index ? 'z-10' : 'z-0'
+                }`}
+                style={{ width: `${100 / timelineItems.length}%` }}
+              >
+                {/* Timeline dot */}
+                <div className={`w-4 h-4 rounded-full border-4 border-white dark:border-bizzie-900 mb-3 transition-all duration-200 ${
+                  selectedItem === index
+                    ? getStatusColor(item.status) + ' scale-150'
+                    : index <= selectedItem
+                    ? getStatusColor(item.status)
+                    : 'bg-gray-300 dark:bg-gray-600'
+                }`}>
+                  {selectedItem === index && (
+                    <div className="w-2 h-2 bg-white rounded-full absolute inset-1"></div>
+                  )}
                 </div>
                 
-                {/* Content */}
-                <div className="bg-white dark:bg-bizzie-800 rounded-xl p-6 shadow-soft-lg flex-1 border border-bizzie-200 dark:border-bizzie-700">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusBadgeStyles(item.status)}`}>
-                          {item.status.charAt(0).toUpperCase() + item.status.slice(1).replace('-', ' ')}
-                        </span>
-                        <span className="text-sm font-semibold text-bizzie-600 dark:text-bizzie-300">
-                          {item.period}
-                        </span>
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-bizzie-900 dark:text-white mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-bizzie-700 dark:text-bizzie-200 mb-4">
-                        {item.description}
-                      </p>
+                {/* Quarter label */}
+                <span className={`text-sm font-bold mb-1 transition-colors duration-200 ${
+                  selectedItem === index
+                    ? 'text-bizzie-900 dark:text-white'
+                    : 'text-gray-600 dark:text-gray-400'
+                }`}>
+                  {item.period}
+                </span>
+                
+                {/* Status badge */}
+                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                  selectedItem === index
+                    ? getStatusBadgeStyles(item.status) + ' scale-105'
+                    : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+                }`}>
+                  {item.status.charAt(0).toUpperCase() + item.status.slice(1).replace('-', ' ')}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Selected content */}
+          <div className="bg-white dark:bg-bizzie-800 rounded-xl p-8 shadow-soft-xl border border-bizzie-200 dark:border-bizzie-700">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Content */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-bizzie-900 dark:text-white mb-4">
+                  {timelineItems[selectedItem].title}
+                </h3>
+                <p className="text-bizzie-700 dark:text-bizzie-200 mb-6 text-lg">
+                  {timelineItems[selectedItem].description}
+                </p>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-bizzie-900 dark:text-white mb-4">Key Features:</h4>
+                  <ul className="space-y-3">
+                    {timelineItems[selectedItem].features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-bizzie-700 dark:text-bizzie-200">
+                        <svg className="w-5 h-5 text-bizzie-600 dark:text-bizzie-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* CTA */}
+                <Button asChild variant="primary" className="btn-primary rounded-lg">
+                  <Link href={timelineItems[selectedItem].ctaLink}>
+                    {timelineItems[selectedItem].ctaText}
+                    <ChevronRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Visual placeholder */}
+              <div className="hidden lg:block">
+                <div className="bg-gray-100 dark:bg-bizzie-700 rounded-xl h-80 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${getStatusColor(timelineItems[selectedItem].status)}`}>
+                      {getStatusIcon(timelineItems[selectedItem].status)}
                     </div>
+                    <p className="text-bizzie-600 dark:text-bizzie-300 font-semibold">
+                      {timelineItems[selectedItem].period}
+                    </p>
                   </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-bizzie-900 dark:text-white mb-3">Key Features:</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {item.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-bizzie-700 dark:text-bizzie-200">
-                          <svg className="w-4 h-4 text-bizzie-600 dark:text-bizzie-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA */}
-                  <Button asChild variant="primary" className="btn-primary rounded-lg">
-                    <Link href={item.ctaLink}>
-                      {item.ctaText}
-                      <ChevronRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </Button>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Legend */}
-        <div className="mt-16 pt-8 border-t border-bizzie-200 dark:border-bizzie-700">
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
-            <div className="flex items-center">
-              <div className="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
-              <span className="text-bizzie-700 dark:text-bizzie-200">Completed</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-4 h-4 bg-bizzie-600 rounded-full mr-2"></div>
-              <span className="text-bizzie-700 dark:text-bizzie-200">In Progress</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-4 h-4 bg-bizzie-400 rounded-full mr-2"></div>
-              <span className="text-bizzie-700 dark:text-bizzie-200">Planned</span>
-            </div>
+          {/* Navigation arrows */}
+          <div className="flex justify-between mt-6">
+            <button
+              onClick={() => setSelectedItem(Math.max(0, selectedItem - 1))}
+              disabled={selectedItem === 0}
+              className="flex items-center gap-2 px-4 py-2 text-bizzie-600 dark:text-bizzie-300 hover:text-bizzie-700 dark:hover:text-bizzie-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Previous
+            </button>
+            
+            <button
+              onClick={() => setSelectedItem(Math.min(timelineItems.length - 1, selectedItem + 1))}
+              disabled={selectedItem === timelineItems.length - 1}
+              className="flex items-center gap-2 px-4 py-2 text-bizzie-600 dark:text-bizzie-300 hover:text-bizzie-700 dark:hover:text-bizzie-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              Next
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section className="px-[5%] py-16 md:py-24 lg:py-28">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-neutral">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
         </section>
 
         {/* Team */}
-        <section className="px-[5%] py-16 md:py-24 lg:py-28">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-medium-accent">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-bizzie-900 dark:text-white mb-12">

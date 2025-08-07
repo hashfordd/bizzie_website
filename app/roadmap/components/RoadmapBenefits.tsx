@@ -6,7 +6,7 @@ import { ChevronRight, RelumeIcon } from "relume-icons";
 
 export function RoadmapBenefits() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-medium-accent">
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>

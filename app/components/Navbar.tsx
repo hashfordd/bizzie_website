@@ -175,9 +175,9 @@ export function Navbar() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.2 }}
-                className="bg-scheme-background lg:absolute lg:z-50 lg:border lg:border-scheme-border lg:left-0 lg:right-0 lg:w-screen lg:max-w-none lg:[--y-close:25%]"
+                className="bg-transparent lg:absolute lg:z-50 lg:left-0 lg:right-0 lg:w-screen lg:max-w-none lg:[--y-close:25%]"
               >
-                <div className="px-4 py-6 lg:px-8 lg:py-8">
+                <div className="bg-white/95 dark:bg-bizzie-900/95 backdrop-blur-md border border-bizzie-200/50 dark:border-bizzie-700/50 rounded-xl mx-4 lg:mx-8 shadow-soft-lg px-6 py-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     {/* Company Section */}

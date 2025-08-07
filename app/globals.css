@@ -874,11 +874,28 @@ td {
 .text-semibold { @apply font-semibold; }
 .text-bold { @apply font-bold; }
 
+/* Text Alignment */
+.text-left { @apply text-left; }
+.text-center { @apply text-center; }
+.text-right { @apply text-right; }
+.text-justify { @apply text-justify; }
+
+/* Responsive Text Alignment */
+.text-center-mobile { @apply text-center md:text-left; }
+.text-left-mobile { @apply text-left md:text-center; }
+
 /* Text Colors for Different Contexts */
 .text-primary { @apply text-bizzie-600 dark:text-bizzie-300; }
 .text-secondary { @apply text-gray-600 dark:text-gray-400; }
 .text-muted { @apply text-gray-500 dark:text-gray-500; }
 .text-accent { @apply text-bizzie-700 dark:text-bizzie-200; }
+
+/* Text Line Height */
+.text-tight { @apply leading-tight; }
+.text-snug { @apply leading-snug; }
+.text-normal-height { @apply leading-normal; }
+.text-relaxed { @apply leading-relaxed; }
+.text-loose { @apply leading-loose; }
 
 /* =============================================
    COMPREHENSIVE HOVER EFFECTS

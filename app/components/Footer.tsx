@@ -61,7 +61,7 @@ export function Footer() {
                 <a href="/about">About Us</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/services">Services</a>
+                <a href="/features">Features</a>
               </li>
 
               <li className="text-small py-2 font-semibold">

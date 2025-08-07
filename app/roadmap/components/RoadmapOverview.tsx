@@ -10,12 +10,12 @@ export function RoadmapOverview() {
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4">Explore</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">
+            <p className="mb-3 font-semibold md:mb-4 text-small">Explore</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6">
               Discover Our Upcoming Features and Enhancements
             </h1>
-            <p className="text-medium mb-6 md:mb-8">
-              Stay informed about the latest features we’re developing to
+            <p className="text-lg mb-6 md:mb-8">
+              Stay informed about the latest features we're developing to
               enhance your experience. Our roadmap is designed to keep you
               updated and engaged with our progress.
             </p>
@@ -24,7 +24,7 @@ export function RoadmapOverview() {
                 <div className="mb-3 md:mb-4">
                   <RelumeIcon className="size-12 text-scheme-text" />
                 </div>
-                <h6 className="heading-h6 mb-3 font-bold md:mb-4">
+                <h6 className="text-lg font-bold mb-3 md:mb-4">
                   Feature Themes
                 </h6>
                 <p>
@@ -35,7 +35,7 @@ export function RoadmapOverview() {
                 <div className="mb-3 md:mb-4">
                   <RelumeIcon className="size-12 text-scheme-text" />
                 </div>
-                <h6 className="heading-h6 mb-3 font-bold md:mb-4">
+                <h6 className="text-lg font-bold mb-3 md:mb-4">
                   User Feedback
                 </h6>
                 <p>Share your thoughts and help shape our future features.</p>

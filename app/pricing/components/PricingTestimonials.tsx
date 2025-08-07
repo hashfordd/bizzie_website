@@ -60,7 +60,7 @@ export function PricingTestimonials() {
                     <StarFull className="size-6 text-scheme-text" />
                     <StarFull className="size-6 text-scheme-text" />
                   </div>
-                  <blockquote className="heading-h5 font-bold">
+                  <blockquote className="text-xl font-bold">
                     "Bizzie has transformed how we manage our costs. The pricing
                     plans are not only affordable but have significantly
                     improved our profitability."
@@ -97,7 +97,7 @@ export function PricingTestimonials() {
                     <StarFull className="size-6 text-scheme-text" />
                     <StarFull className="size-6 text-scheme-text" />
                   </div>
-                  <blockquote className="heading-h5 font-bold">
+                  <blockquote className="text-xl font-bold">
                     "Bizzie has transformed how we manage our costs. The pricing
                     plans are not only affordable but have significantly
                     improved our profitability."

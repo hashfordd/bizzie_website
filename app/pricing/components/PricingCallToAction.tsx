@@ -11,10 +11,10 @@ export function PricingCallToAction() {
       <div className="container grid w-full grid-cols-1 items-start justify-between gap-6 md:grid-cols-[1fr_max-content] md:gap-x-12 md:gap-y-8 lg:gap-x-20">
         <div className="md:mr-12 lg:mr-0">
           <div className="w-full max-w-lg">
-            <h2 className="heading-h3 mb-3 font-bold md:mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-3 font-bold md:mb-4">
               Unlock Your Business Potential
             </h2>
-            <p className="text-medium">
+            <p className="text-lg">
               Start your free trial today and boost profits!
             </p>
           </div>

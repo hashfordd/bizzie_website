@@ -124,19 +124,19 @@ export function Navbar() {
             href="/"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
-            Home Services
+            Home
           </Link>
           <Link
             href="/pricing"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
-            Pricing Plans
+            Pricing
           </Link>
           <Link
             href="/features"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
-            Features List
+            Features
           </Link>
           <div
             onMouseEnter={useActive.openOnDesktopDropdownMenu}
@@ -146,7 +146,7 @@ export function Navbar() {
               className="text-regular flex w-full items-center justify-start gap-4 py-3 text-left lg:w-auto lg:flex-none lg:justify-start lg:gap-2 lg:px-4 lg:py-2"
               onClick={useActive.openOnMobileDropdownMenu}
             >
-              <span>Resources</span>
+              <span>More Info</span>
               <motion.span
                 variants={{ rotated: { rotate: 180 }, initial: { rotate: 0 } }}
                 animate={useActive.animateDropdownMenuIcon}
@@ -175,26 +175,124 @@ export function Navbar() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.2 }}
-                className="bg-scheme-background lg:absolute lg:z-50 lg:border lg:border-scheme-border lg:p-2 lg:[--y-close:25%]"
+                className="bg-scheme-background lg:absolute lg:z-50 lg:border lg:border-scheme-border lg:left-0 lg:right-0 lg:w-screen lg:max-w-none lg:[--y-close:25%]"
               >
-                <Link
-                  href="/roadmap"
-                  className="block py-3 text-left lg:px-4 lg:py-2"
-                >
-                  Roadmap
-                </Link>
-                <Link
-                  href="/support"
-                  className="block py-3 text-left lg:px-4 lg:py-2"
-                >
-                  Support Center
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block py-3 text-left lg:px-4 lg:py-2"
-                >
-                  Contact Us
-                </Link>
+                <div className="px-4 py-6 lg:px-8 lg:py-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    {/* Company Section */}
+                    <div>
+                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                        Company
+                      </h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link href="/about" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            About Us
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/careers" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Careers
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/blog" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Blog
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/testimonials" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Testimonials
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Products & Services */}
+                    <div>
+                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                        Products & Services
+                      </h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link href="/features" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            All Features
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/services" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Services Overview
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/pricing" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Pricing Plans
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/roadmap" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Product Roadmap
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/demo" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Live Demo
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Support & Resources */}
+                    <div>
+                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                        Support & Resources
+                      </h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link href="/support" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Support Center
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/faq" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            FAQ
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/contact" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Contact Us
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Legal & Policies */}
+                    <div>
+                      <h3 className="font-semibold text-bizzie-900 dark:text-white mb-4 text-sm uppercase tracking-wide">
+                        Legal & Policies
+                      </h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link href="/privacy" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Privacy Policy
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/terms" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Terms of Service
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/cookies" className="block py-1 text-gray-700 dark:text-gray-300 hover:text-bizzie-600 dark:hover:text-bizzie-300 transition-colors">
+                            Cookie Settings
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
               </motion.nav>
             </AnimatePresence>
           </div>

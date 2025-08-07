@@ -11,13 +11,13 @@ export function FeaturesOverview() {
         <div className="flex flex-col items-start">
           <div className="mb-12 grid grid-cols-1 items-start justify-between gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:mb-20 lg:gap-x-20">
             <div>
-              <p className="mb-3 font-semibold md:mb-4">Features</p>
-              <h2 className="heading-h2 font-bold">
+              <p className="mb-3 font-semibold md:mb-4 text-small">Features</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                 Empower Your Business with Essential Tools
               </h2>
             </div>
             <div>
-              <p className="text-medium">
+              <p className="text-lg">
                 Bizzie provides home-service businesses with the tools they need
                 to thrive. From tracking equipment inventories to managing
                 expenses, our platform ensures you have a clear view of your
@@ -31,7 +31,7 @@ export function FeaturesOverview() {
               <div className="mb-5 md:mb-6">
                 <RelumeIcon className="size-12 text-scheme-text" />
               </div>
-              <h3 className="heading-h4 mb-5 font-bold md:mb-6">
+              <h3 className="text-xl font-bold mb-5 md:mb-6">
                 Track Equipment Inventories with Ease
               </h3>
               <p>Stay organized and efficient by monitoring your equipment.</p>
@@ -40,7 +40,7 @@ export function FeaturesOverview() {
               <div className="mb-5 md:mb-6">
                 <RelumeIcon className="size-12 text-scheme-text" />
               </div>
-              <h3 className="heading-h4 mb-5 font-bold md:mb-6">
+              <h3 className="text-xl font-bold mb-5 md:mb-6">
                 Log Recurring Bills and Wage Expenses Effortlessly
               </h3>
               <p>Keep your finances in check with automated logging.</p>
@@ -49,7 +49,7 @@ export function FeaturesOverview() {
               <div className="mb-5 md:mb-6">
                 <RelumeIcon className="size-12 text-scheme-text" />
               </div>
-              <h3 className="heading-h4 mb-5 font-bold md:mb-6">
+              <h3 className="text-xl font-bold mb-5 md:mb-6">
                 Visualize Operational Outlays in Real-Time
               </h3>
               <p>Get instant insights into your spending and profits.</p>

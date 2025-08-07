@@ -292,6 +292,23 @@
     @apply bg-white dark:bg-bizzie-900;
   }
 
+  /* Light mode pricing table - ensure proper light styling */
+  .pricing-table .grid {
+    @apply bg-white border-gray-200 !important;
+  }
+
+  .pricing-table .feature-category-header {
+    @apply bg-gray-50 text-gray-900 !important;
+  }
+
+  .pricing-table .grid div {
+    @apply bg-white text-gray-900;
+  }
+
+  .pricing-table .grid p {
+    @apply text-gray-700;
+  }
+
   .dark .pricing-table {
     @apply bg-bizzie-900;
   }

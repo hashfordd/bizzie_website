@@ -9,9 +9,9 @@ export function PricingFeatures() {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-light-accent">
       <div className="container">
         <div className="mb-8 w-full max-w-lg lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Affordable</p>
-          <h2 className="heading-h2 mb-5 font-bold md:mb-6">Pricing Plans</h2>
-          <p className="text-medium">
+          <p className="mb-3 font-semibold md:mb-4 text-small">Affordable</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6">Pricing Plans</h2>
+          <p className="text-lg">
             Choose the right plan for your business and unlock powerful
             financial management tools.
           </p>
@@ -23,7 +23,7 @@ export function PricingFeatures() {
                 <RelumeIcon className="size-8 text-scheme-text" />
               </div>
               <div>
-                <h3 className="heading-h6 mb-3 font-bold md:mb-4">
+                <h3 className="text-lg font-bold mb-3 md:mb-4">
                   Starter Plan
                 </h3>
                 <p>
@@ -37,7 +37,7 @@ export function PricingFeatures() {
                 <RelumeIcon className="size-8 text-scheme-text" />
               </div>
               <div>
-                <h3 className="heading-h6 mb-3 font-bold md:mb-4">
+                <h3 className="text-lg font-bold mb-3 md:mb-4">
                   Professional Plan
                 </h3>
                 <p>
@@ -51,7 +51,7 @@ export function PricingFeatures() {
                 <RelumeIcon className="size-8 text-scheme-text" />
               </div>
               <div>
-                <h3 className="heading-h6 mb-3 font-bold md:mb-4">
+                <h3 className="text-lg font-bold mb-3 md:mb-4">
                   Enterprise Plan
                 </h3>
                 <p>

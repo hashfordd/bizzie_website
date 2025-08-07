@@ -45,3 +45,8 @@ Thumbs.db
 # Logs
 logs
 *.log
+
+# Amplify
+amplify/dist/
+.amplify/
+amplify_outputs.json

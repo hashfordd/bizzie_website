@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 248;
+    --foreground: 43 54 43;
+    --primary: 93 120 93;
+    --primary-foreground: 248 250 248;
+    --secondary: 227 233 227;
+    --secondary-foreground: 43 54 43;
+    --accent: 34 197 94;
+    --accent-foreground: 248 250 248;
+    --muted: 227 233 227;
+    --muted-foreground: 122 148 122;
+    --border: 199 212 199;
+    --input: 227 233 227;
+    --ring: 93 120 93;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-sage-50 text-sage-900 font-sans antialiased;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-soft hover:shadow-soft-lg hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-sage-100 hover:bg-sage-200 text-sage-800 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-sage-300 hover:border-sage-400;
+  }
+
+  .card-enhanced {
+    @apply bg-white/80 backdrop-blur-sm border border-sage-200 rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 p-6;
+  }
+
+  .image-enhanced {
+    @apply rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:scale-105;
+  }
+
+  .section-bg-subtle {
+    @apply bg-gradient-to-br from-sage-50 to-forest-50;
+  }
+
+  .section-bg-accent {
+    @apply bg-gradient-to-br from-sage-100 to-forest-100;
+  }
+}

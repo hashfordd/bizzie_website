@@ -5,6 +5,7 @@ import { useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { KeyboardArrowDown } from "relume-icons";
+import Link from "next/link";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,18 +42,18 @@ const useRelume = () => {
 export function Navbar2() {
   const useActive = useRelume();
   return (
-    <section className="z-[999] flex w-full items-center border-b border-scheme-border bg-scheme-background lg:min-h-18 lg:px-[5%]">
+    <section className="z-[999] flex w-full items-center border-b border-sage-200 bg-white/90 backdrop-blur-md lg:min-h-18 lg:px-[5%] shadow-soft">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <a href="#">
+          <Link href="/">
             <img
               src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
               alt="Logo image"
             />
-          </a>
+          </Link>
           <div className="flex items-center gap-4 lg:hidden">
             <div>
-              <Button className="w-full px-4 py-1" title="Start" size="sm">
+              <Button className="w-full px-4 py-1 bg-sage-600 hover:bg-sage-700 text-white transition-all duration-200 hover:scale-105" title="Start" size="sm">
                 Start
               </Button>
             </div>
@@ -111,24 +112,24 @@ export function Navbar2() {
           transition={{ duration: 0.4 }}
           className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
             Home Services
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/pricing"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
             Pricing Plans
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/features"
             className="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
           >
             Features List
-          </a>
+          </Link>
           <div
             onMouseEnter={useActive.openOnDesktopDropdownMenu}
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
@@ -168,30 +169,30 @@ export function Navbar2() {
                 transition={{ duration: 0.2 }}
                 className="bg-scheme-background lg:absolute lg:z-50 lg:border lg:border-scheme-border lg:p-2 lg:[--y-close:25%]"
               >
-                <a
-                  href="#"
+                <Link
+                  href="/roadmap"
                   className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
                 >
-                  Blog
-                </a>
-                <a
+                  Roadmap
+                </Link>
+                <Link
                   href="#"
                   className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
                 >
                   Support Center
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
                 >
                   Contact Us
-                </a>
+                </Link>
               </motion.nav>
             </AnimatePresence>
           </div>
         </motion.div>
         <div className="hidden justify-self-end lg:block">
-          <Button className="px-6 py-2" title="Start" size="sm">
+          <Button className="px-6 py-2 bg-sage-600 hover:bg-sage-700 text-white transition-all duration-200 hover:scale-105 shadow-soft hover:shadow-soft-lg" title="Start" size="sm">
             Start
           </Button>
         </div>

@@ -22,13 +22,11 @@ export function Hero() {
               operations and maximize your profits effortlessly.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <ContactForm 
-                triggerText="Get Started" 
-                title="Start Your Bizzie Journey"
-                description="Ready to transform your business? Let's discuss how Bizzie can help you achieve your financial goals."
-                variant="bizzie"
-                size="lg"
-              />
+              <Button asChild variant="primary" className="btn-primary rounded-lg">
+                <Link href="/pricing">
+                  Get Started
+                </Link>
+              </Button>
               <Button asChild variant="secondary" className="btn-secondary rounded-lg">
                 <Link href="/features">
                   Learn More

@@ -4,6 +4,7 @@ import { Button } from "@relume_io/relume-ui";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { ChevronRight } from "relume-icons";
+import Link from "next/link";
 
 const Circle = () => {
   const circleRef = useRef(null);
@@ -45,17 +46,17 @@ export function Timeline() {
               operations.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn" variant="secondary">
-                Learn
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
-              <Button
-                title="Explore"
-                variant="link"
-                size="link"
-                iconRight={<ChevronRight className="text-scheme-text" />}
-              >
-                Explore
-              </Button>
+              <div className="flex items-center gap-2 text-bizzie-600">
+                <span className="text-sm">Follow the timeline</span>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />
+                </svg>
+              </div>
             </div>
           </div>
           <div className="absolute z-0 flex h-full w-8 flex-col items-center justify-self-start [grid-area:2/1/3/2] md:z-auto md:justify-self-center md:[grid-area:auto]">
@@ -78,18 +79,10 @@ export function Timeline() {
                   Bizzie. This initial step sets the foundation for better
                   financial management.
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Next" variant="secondary">
-                    Next
-                  </Button>
-                  <Button
-                    title="View"
-                    variant="link"
-                    size="link"
-                    iconRight={<ChevronRight className="text-scheme-text" />}
-                  >
-                    View
-                  </Button>
+                <div className="mt-6">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
+                    Track
+                  </span>
                 </div>
               </div>
             </div>
@@ -105,18 +98,10 @@ export function Timeline() {
                   service pricing. Adjustments are made based on real-time data
                   and insights.
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Continue" variant="secondary">
-                    Continue
-                  </Button>
-                  <Button
-                    title="Update"
-                    variant="link"
-                    size="link"
-                    iconRight={<ChevronRight className="text-scheme-text" />}
-                  >
-                    Update
-                  </Button>
+                <div className="mt-6">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
+                    Refine
+                  </span>
                 </div>
               </div>
             </div>
@@ -132,18 +117,10 @@ export function Timeline() {
                   profitability reports. This analysis reveals trends and areas
                   for improvement.
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Review" variant="secondary">
-                    Review
-                  </Button>
-                  <Button
-                    title="Check"
-                    variant="link"
-                    size="link"
-                    iconRight={<ChevronRight className="text-scheme-text" />}
-                  >
-                    Check
-                  </Button>
+                <div className="mt-6">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
+                    Analyse
+                  </span>
                 </div>
               </div>
             </div>
@@ -159,18 +136,10 @@ export function Timeline() {
                   streamlined operations. Continuous adjustments lead to
                   increased efficiency and profitability.
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Finish" variant="secondary">
-                    Finish
-                  </Button>
-                  <Button
-                    title="Done"
-                    variant="link"
-                    size="link"
-                    iconRight={<ChevronRight className="text-scheme-text" />}
-                  >
-                    Done
-                  </Button>
+                <div className="mt-6">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bizzie-100 dark:bg-bizzie-700 text-bizzie-800 dark:text-bizzie-200">
+                    Optimise
+                  </span>
                 </div>
               </div>
             </div>

@@ -59,8 +59,8 @@ export function Navbar() {
             <div>
               <ContactForm 
                 triggerText="Start" 
-                title="Start Your Bizzie Journey"
-                description="Ready to transform your business? Let's discuss how Bizzie can help you achieve your financial goals."
+                title="Join the Bizzie Waitlist"
+                description="Be the first to experience Bizzie when we launch. We'll keep you updated on our progress."
                 variant="bizzie"
                 size="sm"
               />
@@ -288,8 +288,8 @@ export function Navbar() {
           <DarkModeToggle />
           <ContactForm 
             triggerText="Start" 
-            title="Start Your Bizzie Journey"
-            description="Ready to transform your business? Let's discuss how Bizzie can help you achieve your financial goals."
+            title="Join the Bizzie Waitlist"
+            description="Be the first to experience Bizzie when we launch. We'll keep you updated on our progress."
             variant="bizzie"
             size="sm"
           />

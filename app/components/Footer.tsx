@@ -5,8 +5,6 @@ import {
   FacebookLogo,
   InstagramLogo,
   LinkedinLogo,
-  XLogo,
-  YoutubeLogo,
 } from "relume-icons";
 
 export function Footer() {
@@ -27,20 +25,20 @@ export function Footer() {
             <div className="mb-6 md:mb-8">
               <p className="text-small mb-1 font-semibold text-bizzie-300">Address:</p>
               <p className="text-small mb-5 md:mb-6 text-bizzie-200">
-                Level 1, 12 Sample St, Sydney NSW 2000
+                Melbourne, Victoria
               </p>
               <p className="text-small mb-1 font-semibold text-bizzie-300">Contact:</p>
               <a
-                href="tel:1800 123 4567"
+                href="tel:0498958232"
                 className="text-small block underline text-bizzie-200 hover:text-bizzie-100 transition-colors"
               >
-                1800 123 4567
+                0498 958 232
               </a>
               <a
-                href="mailto:info@bizzie.io"
+                href="mailto:admin@bizzieapp.com"
                 className="text-small block underline text-bizzie-200 hover:text-bizzie-100 transition-colors"
               >
-                info@bizzie.io
+                admin@bizzieapp.com
               </a>
             </div>
             <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3">
@@ -50,15 +48,11 @@ export function Footer() {
               <a href="#" className="hover:scale-110 transition-transform">
                 <InstagramLogo className="size-6 text-bizzie-300 hover:text-white transition-colors duration-200" />
               </a>
-              <a href="#" className="hover:scale-110 transition-transform">
-                <XLogo className="size-6 p-0.5 text-bizzie-300 hover:text-white transition-colors duration-200" />
-              </a>
+
               <a href="#" className="hover:scale-110 transition-transform">
                 <LinkedinLogo className="size-6 text-bizzie-300 hover:text-white transition-colors duration-200" />
               </a>
-              <a href="#" className="hover:scale-110 transition-transform">
-                <YoutubeLogo className="size-6 text-bizzie-300 hover:text-white transition-colors duration-200" />
-              </a>
+
             </div>
           </div>
           <div className="grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
@@ -69,12 +63,7 @@ export function Footer() {
               <li className="text-small py-2 font-semibold">
                 <a href="/services">Services</a>
               </li>
-              <li className="text-small py-2 font-semibold">
-                <a href="/testimonials">Testimonials</a>
-              </li>
-              <li className="text-small py-2 font-semibold">
-                <a href="/blog">Blog</a>
-              </li>
+
               <li className="text-small py-2 font-semibold">
                 <a href="/contact">Contact Us</a>
               </li>
@@ -100,7 +89,7 @@ export function Footer() {
         </div>
         <div className="h-px w-full bg-scheme-border" />
         <div className="text-small flex flex-col-reverse items-start justify-between pt-6 pb-4 md:flex-row md:items-center md:pt-8 md:pb-0">
-          <p className="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
+          <p className="mt-8 md:mt-0">© 2024 Bizzie. All rights reserved.</p>
           <ul className="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
               <a href="/privacy">Privacy Policy</a>

@@ -3,6 +3,8 @@
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { ChevronRight } from "relume-icons";
+import { ContactForm } from "./ui/contact-form";
+import Link from "next/link";
 
 export function FinancialManagement() {
   return (
@@ -20,16 +22,18 @@ export function FinancialManagement() {
               actionable insights to boost your profitability.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More" variant="secondary">
-                Learn More
+              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
+                <Link href="/features">
+                  Learn More
+                </Link>
               </Button>
-              <Button
-                variant="link"
-                size="link"
-                iconRight={<ChevronRight />}
-              >
-                Sign Up
-              </Button>
+              <ContactForm 
+                triggerText="Join Waitlist" 
+                title="Join the Bizzie Waitlist"
+                description="Get early access to Bizzie's financial management tools for home-service businesses."
+                variant="bizzie"
+                size="md"
+              />
             </div>
           </div>
           <div>

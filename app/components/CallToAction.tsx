@@ -20,17 +20,12 @@ export function CallToAction() {
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
               <ContactForm 
-                triggerText="Start Today" 
-                title="Ready to Get Started?"
-                description="Join thousands of businesses already transforming their operations with Bizzie."
+                triggerText="Join Waitlist" 
+                title="Join the Bizzie Waitlist"
+                description="Be among the first to experience Bizzie when we launch. We'll notify you as soon as it's available."
                 variant="bizzie"
                 size="lg"
               />
-              <Button asChild variant="secondary" className="btn-secondary rounded-lg">
-                <Link href="/pricing">
-                  View Demo
-                </Link>
-              </Button>
             </div>
           </div>
           <div className="animate-slide-up" style={{animationDelay: '0.3s'}}>

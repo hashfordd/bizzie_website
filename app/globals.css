@@ -69,11 +69,11 @@
   }
 
   .dark .btn-primary {
-    @apply bg-bizzie-800 hover:bg-bizzie-700 text-white;
+    @apply bg-white hover:bg-gray-100 text-bizzie-900 border border-white;
   }
 
   .dark .btn-secondary {
-    @apply bg-bizzie-800 hover:bg-bizzie-700 text-white border-bizzie-600 hover:border-bizzie-500;
+    @apply bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white hover:border-white;
   }
 
   .card-enhanced {
@@ -126,5 +126,34 @@
 
   .dark .section-bg-primary {
     @apply bg-gradient-to-br from-bizzie-900 via-black to-bizzie-900;
+  }
+
+  /* Improve text contrast in colored sections for dark mode */
+  .dark .section-bg-subtle h1,
+  .dark .section-bg-subtle h2,
+  .dark .section-bg-subtle h3,
+  .dark .section-bg-subtle p,
+  .dark .section-bg-accent h1,
+  .dark .section-bg-accent h2,
+  .dark .section-bg-accent h3,
+  .dark .section-bg-accent p,
+  .dark .section-bg-primary h1,
+  .dark .section-bg-primary h2,
+  .dark .section-bg-primary h3,
+  .dark .section-bg-primary p {
+    @apply text-white !important;
+  }
+
+  .dark .section-bg-subtle .text-bizzie-600,
+  .dark .section-bg-accent .text-bizzie-600,
+  .dark .section-bg-primary .text-bizzie-600 {
+    @apply text-bizzie-300 !important;
+  }
+
+  /* Improve text contrast in demo image placeholder for dark mode */
+  .dark .bg-bizzie-100 p,
+  .dark .bg-bizzie-100 .text-bizzie-600,
+  .dark .bg-bizzie-100 .text-bizzie-500 {
+    @apply text-white !important;
   }
 }

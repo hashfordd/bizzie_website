@@ -45,10 +45,9 @@ export function BusinessPotential() {
                 Start
               </Button>
               <Button
-                title="Learn More"
                 variant="link"
                 size="link"
-                iconRight={<ChevronRight className="" />}
+                iconRight={<ChevronRight />}
               >
                 Learn More
               </Button>

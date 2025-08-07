@@ -249,7 +249,7 @@ export function RoadmapTimeline() {
                 </Link>
               </Button>
               <Button asChild variant="link" size="link">
-                <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700">
+                <Link href="/features">
                   View All Features
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Link>

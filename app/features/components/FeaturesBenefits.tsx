@@ -27,10 +27,9 @@ export function FeaturesBenefits() {
                 Learn More
               </Button>
               <Button
-                title="Sign Up"
                 variant="link"
                 size="link"
-                iconRight={<ChevronRight className="text-scheme-text" />}
+                iconRight={<ChevronRight />}
               >
                 Sign Up
               </Button>

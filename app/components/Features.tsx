@@ -38,7 +38,7 @@ export function Features() {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
+                iconRight={<ChevronRight />}
                 variant="link"
                 size="link"
               >
@@ -60,7 +60,7 @@ export function Features() {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
+                iconRight={<ChevronRight />}
                 variant="link"
                 size="link"
               >
@@ -81,7 +81,7 @@ export function Features() {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <Button
-                iconRight={<ChevronRight className="text-scheme-text" />}
+                iconRight={<ChevronRight />}
                 variant="link"
                 size="link"
               >

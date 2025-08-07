@@ -50,10 +50,9 @@ export function FeaturesTestimonials() {
                 Start
               </Button>
               <Button
-                title="Learn More"
                 variant="link"
                 size="link"
-                iconRight={<ChevronRight className="text-scheme-text" />}
+                iconRight={<ChevronRight />}
               >
                 Learn More
               </Button>

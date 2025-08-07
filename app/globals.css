@@ -867,18 +867,14 @@ td {
    COMPREHENSIVE TEXT UTILITIES
    ============================================= */
 
-/* Text Weights (sizes already available in Tailwind) */
+/* Custom Text Weight Utilities (basic font-* classes already exist in Tailwind) */
 .text-light { @apply font-light; }
 .text-normal { @apply font-normal; }
 .text-medium { @apply font-medium; }
 .text-semibold { @apply font-semibold; }
 .text-bold { @apply font-bold; }
 
-/* Text Alignment */
-.text-left { @apply text-left; }
-.text-center { @apply text-center; }
-.text-right { @apply text-right; }
-.text-justify { @apply text-justify; }
+/* Custom Text Alignment Utilities (basic ones already exist in Tailwind) */
 
 /* Responsive Text Alignment */
 .text-center-mobile { @apply text-center md:text-left; }
@@ -890,12 +886,8 @@ td {
 .text-muted { @apply text-gray-500 dark:text-gray-500; }
 .text-accent { @apply text-bizzie-700 dark:text-bizzie-200; }
 
-/* Text Line Height */
-.text-tight { @apply leading-tight; }
-.text-snug { @apply leading-snug; }
+/* Custom Text Line Height Utilities (basic ones already exist in Tailwind) */
 .text-normal-height { @apply leading-normal; }
-.text-relaxed { @apply leading-relaxed; }
-.text-loose { @apply leading-loose; }
 
 /* =============================================
    COMPREHENSIVE HOVER EFFECTS

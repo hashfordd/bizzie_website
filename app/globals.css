@@ -160,15 +160,40 @@
     @apply text-white !important;
   }
 
-  /* Fix Learn More link buttons in dark mode */
+  /* Fix Learn More link buttons in dark mode - remove all button styling */
   .dark [data-variant="link"],
   .dark button[class*="variant-link"],
   .dark .btn-link {
     @apply text-white bg-transparent border-none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
   .dark .text-scheme-text {
     @apply text-white !important;
+  }
+
+  /* Fix text links to appear as plain text, not buttons */
+  .dark a[class*="variant-link"],
+  .dark .text-link,
+  .dark button[data-variant="link"] {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: white !important;
+    text-decoration: underline;
+    font-weight: normal !important;
+  }
+
+  .dark a[class*="variant-link"]:hover,
+  .dark .text-link:hover,
+  .dark button[data-variant="link"]:hover {
+    background: none !important;
+    color: #CAD2C5 !important;
+    text-decoration: underline;
   }
 
   /* Enhanced button styling for all modes */

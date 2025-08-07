@@ -1,415 +1,297 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@relume_io/relume-ui";
 import React, { useState } from "react";
 import { ChevronRight } from "relume-icons";
+import Link from "next/link";
 
-const useTabAnimation = ({ tabs }: { tabs: any[] }) => {
-  const [activeTab, setActiveTab] = useState(tabs[0].value);
-
-  const isTabActive = (index: number) => {
-    const activeIndex = tabs.findIndex((tab) => tab.value === activeTab);
-    return index <= activeIndex;
-  };
-
-  const progressWidth = () => {
-    const activeIndex = tabs.findIndex((tab) => tab.value === activeTab);
-    return `${(100 / (tabs.length * 2)) * (activeIndex * 2 + 1)}%`;
-  };
-
-  const circleClassName = (index: number) => {
-    return `z-20 flex size-[0.9375rem] flex-none items-center justify-center rounded-full shadow-[0_0_0_8px_white] transition-colors duration-300 ${
-      isTabActive(index) ? "bg-scheme-text" : "bg-scheme-text/20"
-    }`;
-  };
-
-  const triggerClassName = (index: number) => {
-    return `relative flex flex-1 flex-col items-center justify-center gap-2 border-0 px-0 transition-colors duration-300 data-[state=active]:bg-transparent ${
-      isTabActive(index)
-        ? "data-[state=active]:text-scheme-text"
-        : "text-scheme-text/20"
-    }`;
-  };
-
-  return {
-    activeTab,
-    setActiveTab,
-    progressWidth,
-    circleClassName,
-    triggerClassName,
-  };
-};
+interface TimelineItem {
+  id: string;
+  period: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  title: string;
+  description: string;
+  features: string[];
+  ctaText: string;
+  ctaLink: string;
+  image: string;
+}
 
 export function RoadmapTimeline() {
-  const tabAnimation = useTabAnimation({
-    tabs: [
-      {
-        value: "tab-one",
-        trigger: "Date",
-        content: {
-          date: "Date",
-          heading: "Long heading is what you see here in this feature section",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-          buttons: [
-            { title: "Button", variant: "secondary" },
-            {
-              title: "Button",
-              variant: "link",
-              size: "link",
-              iconRight: <ChevronRight className="text-scheme-text" />,
-            },
-          ],
-          image: {
-            src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-            alt: "Relume placeholder image 1",
-          },
-        },
-      },
-      {
-        value: "tab-two",
-        trigger: "Date",
-        content: {
-          date: "Date",
-          heading: "Long heading is what you see here in this feature section",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-          buttons: [
-            { title: "Button", variant: "secondary" },
-            {
-              title: "Button",
-              variant: "link",
-              size: "link",
-              iconRight: <ChevronRight className="text-scheme-text" />,
-            },
-          ],
-          image: {
-            src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-            alt: "Relume placeholder image 2",
-          },
-        },
-      },
-      {
-        value: "tab-three",
-        trigger: "Date",
-        content: {
-          date: "Date",
-          heading: "Long heading is what you see here in this feature section",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-          buttons: [
-            { title: "Button", variant: "secondary" },
-            {
-              title: "Button",
-              variant: "link",
-              size: "link",
-              iconRight: <ChevronRight className="text-scheme-text" />,
-            },
-          ],
-          image: {
-            src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-            alt: "Relume placeholder image 3",
-          },
-        },
-      },
-      {
-        value: "tab-four",
-        trigger: "Date",
-        content: {
-          date: "Date",
-          heading: "Long heading is what you see here in this feature section",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-          buttons: [
-            { title: "Button", variant: "secondary" },
-            {
-              title: "Button",
-              variant: "link",
-              size: "link",
-              iconRight: <ChevronRight className="text-scheme-text" />,
-            },
-          ],
-          image: {
-            src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-            alt: "Relume placeholder image 4",
-          },
-        },
-      },
-      {
-        value: "tab-five",
-        trigger: "Date",
-        content: {
-          date: "Date",
-          heading: "Long heading is what you see here in this feature section",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-          buttons: [
-            { title: "Button", variant: "secondary" },
-            {
-              title: "Button",
-              variant: "link",
-              size: "link",
-              iconRight: <ChevronRight className="text-scheme-text" />,
-            },
-          ],
-          image: {
-            src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-            alt: "Relume placeholder image 5",
-          },
-        },
-      },
-    ],
-  });
+  const [selectedItem, setSelectedItem] = useState("q1-2025");
+
+  const timelineItems: TimelineItem[] = [
+    {
+      id: "q4-2024",
+      period: "Q4 2024",
+      status: "completed",
+      title: "Foundation & Core Features",
+      description: "Established the core infrastructure for Bizzie with essential financial management tools.",
+      features: [
+        "Basic expense tracking",
+        "Invoice generation",
+        "Customer management",
+        "Initial dashboard"
+      ],
+      ctaText: "View Features",
+      ctaLink: "/features",
+      image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+    },
+    {
+      id: "q1-2025",
+      period: "Q1 2025",
+      status: "in-progress",
+      title: "Advanced Analytics & Reporting",
+      description: "Powerful business intelligence tools to help you understand your financial performance.",
+      features: [
+        "Profit margin analysis",
+        "Cash flow forecasting",
+        "Custom report builder",
+        "Performance dashboards"
+      ],
+      ctaText: "Join Beta",
+      ctaLink: "/pricing",
+      image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+    },
+    {
+      id: "q2-2025",
+      period: "Q2 2025",
+      status: "planned",
+      title: "Mobile App & Field Management",
+      description: "Take Bizzie on the go with our mobile app designed for field workers and managers.",
+      features: [
+        "iOS & Android apps",
+        "Offline functionality",
+        "Job site check-ins",
+        "Photo attachments"
+      ],
+      ctaText: "Request Early Access",
+      ctaLink: "#",
+      image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+    },
+    {
+      id: "q3-2025",
+      period: "Q3 2025",
+      status: "planned",
+      title: "Integrations & Automation",
+      description: "Connect Bizzie with your existing tools and automate repetitive tasks.",
+      features: [
+        "QuickBooks integration",
+        "Bank account sync",
+        "Automated invoicing",
+        "API access"
+      ],
+      ctaText: "Stay Updated",
+      ctaLink: "#",
+      image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+    },
+    {
+      id: "q4-2025",
+      period: "Q4 2025",
+      status: "planned",
+      title: "AI-Powered Insights",
+      description: "Leverage artificial intelligence to get personalized recommendations for your business.",
+      features: [
+        "Predictive analytics",
+        "Smart cost optimization",
+        "Automated categorization",
+        "Business health scoring"
+      ],
+      ctaText: "Learn More",
+      ctaLink: "#",
+      image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+    }
+  ];
+
+  const getStatusIcon = (status: TimelineItem['status']) => {
+    switch (status) {
+      case 'completed':
+        return (
+          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+          </svg>
+        );
+      case 'in-progress':
+        return (
+          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+          </svg>
+        );
+      case 'planned':
+        return (
+          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const getStatusColor = (status: TimelineItem['status']) => {
+    switch (status) {
+      case 'completed':
+        return 'bg-green-500';
+      case 'in-progress':
+        return 'bg-bizzie-600';
+      case 'planned':
+        return 'bg-bizzie-400';
+      default:
+        return 'bg-gray-300';
+    }
+  };
+
+  const selectedItemData = timelineItems.find(item => item.id === selectedItem) || timelineItems[1];
+
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="relative container">
-        <div
-          className="absolute bottom-[99px] z-10 h-[3px] bg-scheme-text transition-[width] duration-300 md:bottom-[58px]"
-          style={{ width: tabAnimation.progressWidth() }}
-        />
-        <Tabs
-          defaultValue="tab-one"
-          onValueChange={tabAnimation.setActiveTab}
-          className="relative flex flex-col"
-        >
-          <TabsContent
-            value="tab-one"
-            className="grid grid-cols-1 gap-x-12 gap-y-12 data-[state=active]:animate-tabs md:grid-cols-2 md:items-center md:gap-y-16 lg:gap-x-20"
-          >
-            <div>
-              <h3 className="heading-h3 mb-3 font-bold md:mb-4">Q3</h3>
-              <h4 className="heading-h4 mb-5 font-bold md:mb-6">
-                Upcoming Features for Q3 2025: What to Expect
-              </h4>
-              <p className="text-medium">
-                In Q3 2025, we will introduce advanced analytics tools. These
-                features will empower users to make data-driven decisions with
-                ease.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <Button title="Explore" variant="secondary">
-                  Explore
-                </Button>
-                <Button
-                  title="Learn"
-                  variant="link"
-                  size="link"
-                  iconRight={<ChevronRight className="text-scheme-text" />}
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 section-bg-light-accent">
+      <div className="container">
+        <div className="mb-12 text-center md:mb-16 lg:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold md:mb-6 text-bizzie-900 leading-tight">
+            Our Product <span className="text-bizzie-600">Roadmap</span>
+          </h2>
+          <p className="text-lg text-bizzie-700 max-w-2xl mx-auto leading-relaxed">
+            Follow our journey as we build the future of financial management for home-service businesses.
+          </p>
+        </div>
+
+        {/* Timeline Navigation */}
+        <div className="relative mb-16">
+          {/* Progress Line */}
+          <div className="absolute top-8 left-0 w-full h-1 bg-bizzie-200 rounded-full">
+            <div 
+              className="h-full bg-bizzie-600 rounded-full transition-all duration-500"
+              style={{ 
+                width: `${((timelineItems.findIndex(item => item.id === selectedItem) + 1) / timelineItems.length) * 100}%` 
+              }}
+            />
+          </div>
+
+          {/* Timeline Items */}
+          <div className="flex justify-between items-center relative">
+            {timelineItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => setSelectedItem(item.id)}
+                className={`flex flex-col items-center group transition-all duration-300 ${
+                  selectedItem === item.id ? 'transform scale-110' : 'hover:scale-105'
+                }`}
+              >
+                {/* Circle */}
+                <div 
+                  className={`w-16 h-16 rounded-full border-4 border-white shadow-lg flex items-center justify-center transition-all duration-300 ${
+                    selectedItem === item.id 
+                      ? getStatusColor(item.status) + ' ring-4 ring-bizzie-200' 
+                      : getStatusColor(item.status) + ' opacity-60'
+                  }`}
                 >
-                  Learn
-                </Button>
-              </div>
+                  {getStatusIcon(item.status)}
+                </div>
+                
+                {/* Label */}
+                <div className="mt-4 text-center">
+                  <p className={`font-semibold text-sm transition-colors duration-300 ${
+                    selectedItem === item.id ? 'text-bizzie-900' : 'text-bizzie-600'
+                  }`}>
+                    {item.period}
+                  </p>
+                  <p className={`text-xs mt-1 capitalize transition-colors duration-300 ${
+                    selectedItem === item.id ? 'text-bizzie-700' : 'text-bizzie-500'
+                  }`}>
+                    {item.status.replace('-', ' ')}
+                  </p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Selected Item Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="mb-4">
+              <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                selectedItemData.status === 'completed' ? 'bg-green-100 text-green-800' :
+                selectedItemData.status === 'in-progress' ? 'bg-bizzie-100 text-bizzie-800' :
+                'bg-gray-100 text-gray-800'
+              }`}>
+                {getStatusIcon(selectedItemData.status)}
+                <span className="ml-2 capitalize">{selectedItemData.status.replace('-', ' ')}</span>
+              </span>
             </div>
-            <div>
+
+            <h3 className="text-2xl md:text-3xl font-bold text-bizzie-900 mb-4">
+              {selectedItemData.title}
+            </h3>
+
+            <p className="text-lg text-bizzie-700 mb-6 leading-relaxed">
+              {selectedItemData.description}
+            </p>
+
+            <div className="mb-8">
+              <h4 className="font-semibold text-bizzie-900 mb-3">Key Features:</h4>
+              <ul className="space-y-2">
+                {selectedItemData.features.map((feature, index) => (
+                  <li key={index} className="flex items-center text-bizzie-700">
+                    <svg className="w-5 h-5 text-bizzie-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Button asChild variant="primary" className="btn-primary rounded-lg">
+                <Link href={selectedItemData.ctaLink}>
+                  {selectedItemData.ctaText}
+                </Link>
+              </Button>
+              <Button asChild variant="link" size="link">
+                <Link href="/features" className="inline-flex items-center text-bizzie-600 hover:text-bizzie-700">
+                  View All Features
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <div className="relative">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 1"
-                className="w-full object-cover"
+                src={selectedItemData.image}
+                alt={`${selectedItemData.title} preview`}
+                className="w-full rounded-xl shadow-soft-lg border border-bizzie-200"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-bizzie-900/20 to-transparent rounded-xl" />
             </div>
-          </TabsContent>
-          <TabsContent
-            value="tab-two"
-            className="grid grid-cols-1 gap-x-12 gap-y-12 data-[state=active]:animate-tabs md:grid-cols-2 md:items-center md:gap-y-16 lg:gap-x-20"
-          >
-            <div>
-              <h3 className="heading-h3 mb-3 font-bold md:mb-4">Q4</h3>
-              <h4 className="heading-h4 mb-5 font-bold md:mb-6">
-                Enhancements Coming in Q4 2025: Get Ready for More
-              </h4>
-              <p className="text-medium">
-                Q4 2025 will focus on mobile enhancements for on-the-go access.
-                Expect features that streamline your workflow directly from your
-                device.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <Button title="Join" variant="secondary">
-                  Join
-                </Button>
-                <Button
-                  title="Sign"
-                  variant="link"
-                  size="link"
-                  iconRight={<ChevronRight className="text-scheme-text" />}
-                >
-                  Sign
-                </Button>
-              </div>
+          </div>
+        </div>
+
+        {/* Legend */}
+        <div className="mt-16 pt-8 border-t border-bizzie-200">
+          <div className="flex flex-wrap justify-center gap-8 text-sm">
+            <div className="flex items-center">
+              <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-bizzie-700">Completed</span>
             </div>
-            <div>
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 2"
-                className="w-full object-cover"
-              />
+            <div className="flex items-center">
+              <svg className="w-5 h-5 text-bizzie-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+              </svg>
+              <span className="text-bizzie-700">In Progress</span>
             </div>
-          </TabsContent>
-          <TabsContent
-            value="tab-three"
-            className="grid grid-cols-1 gap-x-12 gap-y-12 data-[state=active]:animate-tabs md:grid-cols-2 md:items-center md:gap-y-16 lg:gap-x-20"
-          >
-            <div>
-              <h3 className="heading-h3 mb-3 font-bold md:mb-4">Beyond</h3>
-              <h4 className="heading-h4 mb-5 font-bold md:mb-6">
-                Future Features Beyond 2025: Our Vision for Growth
-              </h4>
-              <p className="text-medium">
-                Looking ahead, we aim to integrate more third-party tools. This
-                will enhance collaboration and efficiency for our users.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <Button title="Discover" variant="secondary">
-                  Discover
-                </Button>
-                <Button
-                  title="Submit"
-                  variant="link"
-                  size="link"
-                  iconRight={<ChevronRight className="text-scheme-text" />}
-                >
-                  Submit
-                </Button>
-              </div>
+            <div className="flex items-center">
+              <svg className="w-5 h-5 text-bizzie-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span className="text-bizzie-700">Planned</span>
             </div>
-            <div>
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 3"
-                className="w-full object-cover"
-              />
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="tab-four"
-            className="grid grid-cols-1 gap-x-12 gap-y-12 data-[state=active]:animate-tabs md:grid-cols-2 md:items-center md:gap-y-16 lg:gap-x-20"
-          >
-            <div>
-              <h3 className="heading-h3 mb-3 font-bold md:mb-4">Q3</h3>
-              <h4 className="heading-h4 mb-5 font-bold md:mb-6">
-                Feature Updates for Q3: What’s New and Improved
-              </h4>
-              <p className="text-medium">
-                In Q3, we will enhance our job costing dashboards. Users can
-                expect more intuitive navigation and insights.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <Button title="Explore" variant="secondary">
-                  Explore
-                </Button>
-                <Button
-                  title="Learn"
-                  variant="link"
-                  size="link"
-                  iconRight={<ChevronRight className="text-scheme-text" />}
-                >
-                  Learn
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 4"
-                className="w-full object-cover"
-              />
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="tab-five"
-            className="grid grid-cols-1 gap-x-12 gap-y-12 data-[state=active]:animate-tabs md:grid-cols-2 md:items-center md:gap-y-16 lg:gap-x-20"
-          >
-            <div>
-              <h3 className="heading-h3 mb-3 font-bold md:mb-4">Q4</h3>
-              <h4 className="heading-h4 mb-5 font-bold md:mb-6">
-                Q4 Feature Rollout: Enhancements You Can Look Forward To
-              </h4>
-              <p className="text-medium">
-                Expect significant updates in our mobile app for Q4. These will
-                improve user experience and accessibility.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <Button title="Join" variant="secondary">
-                  Join
-                </Button>
-                <Button
-                  title="Sign"
-                  variant="link"
-                  size="link"
-                  iconRight={<ChevronRight className="text-scheme-text" />}
-                >
-                  Sign
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 5"
-                className="w-full object-cover"
-              />
-            </div>
-          </TabsContent>
-          <TabsList className="relative mt-16 mb-12 ml-[-5vw] scrollbar-none flex w-screen items-center justify-start border-b border-b-transparent px-[5vw] md:mb-0 md:ml-0 md:w-auto md:justify-between md:px-0">
-            <TabsTrigger
-              value="tab-one"
-              className={tabAnimation.triggerClassName(0)}
-            >
-              <div className="absolute top-3.5 left-0 z-20 h-[6px] w-16 bg-gradient-to-l from-transparent to-scheme-background" />
-              <div className="flex w-full items-center">
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-                <div className={tabAnimation.circleClassName(0)} />
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-              </div>
-              <span className="heading-h5 font-bold">Q4</span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-two"
-              className={tabAnimation.triggerClassName(1)}
-            >
-              <div className="flex w-full items-center">
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-                <div className={tabAnimation.circleClassName(1)} />
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-              </div>
-              <span className="heading-h5 font-bold">Q4</span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-three"
-              className={tabAnimation.triggerClassName(2)}
-            >
-              <div className="flex w-full items-center">
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-                <div className={tabAnimation.circleClassName(2)} />
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-              </div>
-              <span className="heading-h5 font-bold">Q4</span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-four"
-              className={tabAnimation.triggerClassName(3)}
-            >
-              <div className="flex w-full items-center">
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-                <div className={tabAnimation.circleClassName(3)} />
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-              </div>
-              <span className="heading-h5 font-bold">Q4</span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-five"
-              className={tabAnimation.triggerClassName(4)}
-            >
-              <div className="flex w-full items-center">
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-                <div className={tabAnimation.circleClassName(4)} />
-                <div className="h-[3px] w-full bg-scheme-text/20" />
-              </div>
-              <span className="heading-h5 font-bold">Q4</span>
-              <div className="absolute top-3.5 right-0 z-0 h-2 w-16 bg-gradient-to-r from-transparent to-scheme-background" />
-            </TabsTrigger>
-          </TabsList>
-        </Tabs>
+          </div>
+        </div>
       </div>
     </section>
   );

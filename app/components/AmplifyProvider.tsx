@@ -1,7 +1,7 @@
 'use client';
 
 import { Amplify } from 'aws-amplify';
-import amplifyOutputs from '../../amplify_outputs.json';
+import amplifyOutputs from '../amplify_outputs.json';
 import { useEffect } from 'react';
 
 // Configure Amplify

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AmplifyProvider from './components/AmplifyProvider'
 
 export const metadata: Metadata = {
   title: 'Bizzie - Transform Your Business',
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AmplifyProvider>
+          {children}
+        </AmplifyProvider>
+      </body>
     </html>
   )
 }
